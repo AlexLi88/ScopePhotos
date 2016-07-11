@@ -1,0 +1,115 @@
+#userfollower_main .one_follower{
+
+    display: inline-block;
+    width: 18%;
+    margin-left: 2%;
+    margin-top: 1%;
+    position: relative;
+    min-height: 210px;
+    vertical-align: top;
+    background-color: white;
+    padding: 0.5em;
+}
+#userfollower_main .follower_name{
+
+    display: block;
+    margin: auto;
+    color: black;
+    font-weight: 600;
+    font-size: 1em;
+}
+
+#userfollower_main .one_foller .follow_button,.un_follow_button{
+
+    display: block;
+    bottom: 0;
+}
+
+#userfollower_main .follow_buttons{
+
+    margin-top: 10%;
+}
+
+#userfollower_main .container{
+
+    /*padding:5%;*/
+    /*padding-left: 10%;*/
+    /*padding-right: 10%;*/
+}
+
+#userfollower_main .one_follower .image{
+
+    display: block;
+    width: 100%;
+    margin: auto;
+    overflow: hidden;
+    padding: 3em;
+    padding-top: .5em;
+    padding-bottom: 0.5em;
+    min-height: 121px;
+}
+
+
+#userfollower_main .one_follower .image img{
+
+    max-width: 100%;
+    max-height: 100%;
+    min-height: 61px;
+    border-radius: 100%;
+}
+
+
+#userfollower_main .one_follower_info{
+
+    display: inline-block;
+    vertical-align: top;
+    padding: 3%;
+    width: 100%;
+    text-align: center;
+}
+
+@media only screen and (max-width: 800px){
+
+    #userfollower_main .one_follower{
+        display: inline-block;
+        width: 24%;
+        margin-left: 1%;
+        margin-top: 1%;
+        position: relative;
+        vertical-align: top;
+        background-color: white;
+        padding: 0.5em;
+        min-height: 213px;
+    }
+
+    #userfollower_main .one_follower .image img{
+
+        max-width: 100%;
+        max-height: 100%;
+        min-height: 75px;
+        border-radius: 100%;
+    }
+
+    #userfollower_main .one_follower .image{
+
+        padding: 2em;
+        padding-bottom: 0em;
+    }
+
+
+}
+
+@media only screen and (max-width: 700px){
+
+    #userfollower_main .one_follower{
+
+        display: inline-block;
+        width: 49%;
+        margin-left: 1%;
+        margin-top: 1%;
+        position: relative;
+        vertical-align: top;
+        background-color: white;
+        padding: 0.5em;
+    }
+}

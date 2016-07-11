@@ -1,0 +1,334 @@
+#image_search_main{
+
+    background: #F0F0F0;
+    min-height: 100vh;
+    font-family: "Source Sans Pro";
+}
+
+#image_search_main  #image_search_title{
+
+    width: 100%;
+    position: relative;
+    z-index:1;
+}
+
+#image_search_main .large{
+
+    padding-left: 0 !important;  padding-right: 0 !important;
+}
+
+#image_search_main #photoManagement_imageList li{
+
+    display: inline-block;
+    list-style: none;
+    margin-top: 0.2em;
+    z-index: 0;
+}
+
+#image_search_main .container-fluid{
+
+    padding-left: 5%;
+    padding-right: 5%;
+    padding-bottom: 5%;
+}
+
+#photoManagement_imageList .photoContainer{
+
+    position: relative;
+}
+
+#photoManagement_imageList .photoContainer .play_sym{
+
+    position: absolute;
+    top: 50%;
+    color: rgba(255, 255, 255, 0.92);
+    font-size: 5em;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    line-height: 1em;
+}
+
+#photoManagement_imageList .photoContainer:hover{
+
+    cursor: pointer;
+
+}
+
+#image_search_main #photoManagement_imageList .photo_caption{
+
+    padding: 2%;
+    margin-bottom: 0px;
+    word-break: break-all;
+}
+#photoManagement_imageList .ui[class*="right ribbon"].label{
+
+    top: 50px;
+    left: calc(100% + 1rem + 1.2em - 19px);
+    border-radius: 0px;
+    z-index: 2;
+    font-size: 20px;
+    padding: 5px 5px 5px 15px;
+    padding: 2%;
+    position: absolute;
+}
+
+#photoManagement_imageList .ui[class*="right ribbon"].label:after{
+
+        border-width: 0.3em 1em 0 0;
+}
+
+#photoManagement_imageList .ui.label>.icon{
+
+    margin: 2px;
+}
+
+#photoManagement_imageList .ui.blue.label{
+
+    /*background-color: #4A90B9!important;*/
+}
+
+#photoManagement_imageList .ui.blue.ribbon.label{
+
+    border-color: #35637D!important;
+}
+
+.selected_border{
+
+    width: 100%;
+    position: absolute;
+    height: 5px;
+    z-index: 1;
+    background: #DA7575;
+    -ms-transform: translateY(5px); /* IE 9 */
+    -webkit-transform: translateY(5px); /* Chrome, Safari, Opera */
+    transform: translateY(5px);
+    transition: all linear 0.2s;
+    opacity: 0;
+    top:0;
+}
+
+.selected_border.show{
+
+    -ms-transform: translateY(0px); /* IE 9 */
+    -webkit-transform: translateY(0px); /* Chrome, Safari, Opera */
+    transform: translateY(0px);
+    opacity: 1;
+
+}
+
+#photoManagement_imageList{
+
+    padding: 0;
+    padding-bottom: 50px;
+    margin: 0;
+}
+
+#image_search_main #photoManagement_imageList .image_time_location{
+
+    padding: 5%;
+    font-size: 13px;
+    color: grey;
+    text-align: right;
+}
+
+#photoManagement_imageList img{
+
+    width:100%;
+    height: auto;
+}
+
+
+
+#image_search_main .photoManagement_oneImage{
+
+    width: 24%;
+    margin-left: 0.8%;
+    margin-top: 1%;
+    display: inline-block;
+    opacity: 0;
+    transition: opacity 1s;
+    position: relative;
+    background: white;
+    border: 1px solid #ECEBEB;
+    /*transform:translateY(-5px);*/
+    /* transition: transform .5s,box-shadow .5s, opacity .5s; */
+}
+
+
+.time_location{
+
+    font-size: 0.9em;
+    font-weight: 400;
+    color: grey;
+    line-height: 1em;
+    margin-top: 3%;
+    margin-left: -1.5px;
+}
+
+.time_location .location{}
+
+.time_location div{
+
+    display: inline-block;
+}
+
+.time_location i.tiny.icon, i.tiny.icons{
+
+    line-height: 1;
+    font-size: .85714286rem;
+    margin-right: 0;
+}
+
+#image_search_main .photoManagement_oneImage.masonry-brick.loaded{
+
+    opacity: 1;
+}
+
+#image_search_left{
+
+    width:100%;
+    display: inline-block;
+
+}
+
+.photoManagement_oneImage .userName_userAvatar{
+
+    width: auto;
+    z-index: 1;
+    padding: 1em;
+    position: relative;
+    padding-right: 0em;
+
+}
+
+.photoManagement_oneImage .one_tag .ui.basic.label{
+
+    font-weight: bolder ;
+}
+
+.photoManagement_oneImage .userAvatar{
+
+    width: 12%;
+    border-radius: 50%;
+    overflow: hidden;
+    display: inline-block;
+    vertical-align: top;
+    max-width: 40px;
+}
+
+.photoManagement_oneImage .userName_source{
+
+    display: inline-block;
+    padding: 0.2em 0.5em;
+    vertical-align: top;
+    width: 85%;
+    text-align: left !important;
+}
+
+.photoManagement_oneImage .userName_source .userName{
+
+    font-size: 1.05em;
+    font-weight: 600;
+}
+
+.photoManagement_oneImage .userName_source .source{
+
+    font-size: 0.9em;
+    font-weight: 400;
+    color: grey;
+    line-height: 0.9em;
+}
+
+#photoManagement_imageList .photo_info{
+
+    padding: 5%;
+    background: white;
+    word-break: break-all;
+    color: #636262;
+}
+
+#photoManagement_imageList .photo_info .caption{
+
+    font-size: 1.1em;
+    font-weight: 600;
+    color: #4E4D4D;
+}
+
+#photoManagement_imageList .photo_info .ui.basic.label{
+
+    color: grey;
+    font-weight: 500 !important;
+    border-color: grey;
+    border-radius: 0px;
+}
+
+#photoManagement_imageList .tag_list{
+
+    padding: 0;
+    margin-top: 0.5em;
+}
+
+#photoManagement_imageList .one_tag{
+
+    display: inline-block;
+    list-style:none;
+    margin-right: 2px;
+    margin-top: 3px;
+    cursor: pointer;
+}
+
+loadinganimation{
+
+    margin-bottom: 5%;
+}
+
+#photoManagement_imageList .photo_info .info{
+
+    font-size: 0.8em;
+    font-weight: 600;
+    line-height: 1.4em;
+    margin-top: 3%;
+}
+
+
+@media only screen and (max-width: 1250px) {
+
+    #image_search_main .photoManagement_oneImage{
+
+        width: 32% ;
+        margin-left: 0.8% ;
+    }
+
+}
+
+@media only screen and (max-width: 800px) {
+
+    #image_search_main .photoManagement_oneImage{
+
+        width: 49% ;
+        margin-left: 0.8% ;
+    }
+
+    #image_search_main  #image_search_title{
+
+        width: 100%;
+    }
+
+}
+
+@media only screen and (max-width: 700px) {
+
+    #image_search_main .photoManagement_oneImage{
+
+        margin-top: 0 !important;
+        margin-bottom: 0 !important;
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+        width: 100%;
+        border: 0;
+        border-top: 1px solid gainsboro;
+    }
+
+
+}
+

@@ -1,0 +1,39 @@
+<div id="singleimage_main">
+
+
+    <div id="image_search_list" ng-class="{'container': pasCtr.viewMode=='Compact','container-fluid': pasCtr.viewMode=='Presentation'}">
+        <ul id="photoManagement_imageList">
+            <li class="photoManagement_oneImage">
+
+                <div class="photoContainer" ng-click="showDetailImage(image,image.id)" ng-mouseover="showRibbon($event)" ng-mouseleave="hideRibbon($event)"><img ng-src="{{image.retina.url}}">
+                </div>
+
+                <div class="image_info_section" ng-show="pasCtr.viewFormate!='imageOnly' && pasCtr.viewFormate!='imageLarge' ">
+                    <div class="userName_userAvatar" ng-show="pasCtr.viewFormate!='imageOnly' && pasCtr.viewFormate!='imageLarge'">
+                        <!--<div class="ui blue right ribbon label" ng-show="image.sourceType != 'PX' && image.sourceType != 'SM'"><i class="icon white" ng-class="determineOriginalIcon(image)"></i></div>-->
+                        <div class="userAvatar"><a ng-attr-href = "{{presentAndShare_factory.determineOriginal(image)}}" target="_blank"><img ng-src="{{image.sourceOwner? image.sourceOwner.profile_picture: image.owner.avatar}}"></a></div>
+                        <div class="userName_source">
+                            <div class="userName">{{image.sourceOwner.username?image.sourceOwner.username:image.owner.name}}</div>
+                            <div class="source">{{'@ ' + presentAndShare_factory.determineOriginalText(image)}}</div>
+                            <div class="time_location">
+                                <div class="location"><i class="icon tiny marker"></i>{{image.location.address}}</div>
+                                <div class="image_time" style="margin-left: 0.35em;"><i class=""></i>{{presentAndShare_factory.getShotTime(image.shotTime)}}</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="photo_info">
+                        <div class="caption">{{presentAndShare_factory.limiteDescription(image.caption)}}</div>
+                        <div class="info" ng-bind="presentAndShare_factory.limiteDescription(image.description)"></div>
+                        <div>
+                            <ul class="tag_list">
+                                <li class="one_tag" ng-repeat="tag in image.tags | limitTo: 10" ><a color colorArr="pasCtr.tagCols" ng-href="{{ '#/imagesearch?searchType=photo&searchContent=' + tag.text}}">{{'#' + tag.text}}</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </li>
+        </ul>
+        <loadinganimation ng-show="updating"></loadinganimation>
+    </div>
+
+</div>

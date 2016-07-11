@@ -1,0 +1,57 @@
+#presentandembed_main {
+  #compact_main {
+    .photoManagement_oneImage {
+
+      width: 16.66667%;
+      margin-top: 0;
+      margin-left: 0;
+      border: none;
+      transition: none;
+
+    }
+
+  }
+}
+
+
+@media only screen and (max-width: 1250px) {
+
+  #presentandembed_main #compact_main .photoManagement_oneImage{
+
+    width: 25% !important;
+    margin: 0% !important;
+  }
+
+}
+@media only screen and (max-width: 950px) {
+
+
+  #presentandembed_main #compact_main .photoManagement_oneImage{
+
+    width: 33.333% !important;
+    margin:0% !important;
+  }
+}
+
+@media only screen and (max-width: 800px) {
+
+  #presentandembed_main #compact_main .photoManagement_oneImage{
+
+    width: 50% !important;
+    margin-left: 0% !important;
+  }
+
+}
+@media only screen and (max-width: 450px) {
+
+  #presentandembed_main #compact_main .photoManagement_oneImage {
+
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    width: 100% !important;
+    border: 0;
+    border-top: 1px solid gainsboro;
+  }
+}

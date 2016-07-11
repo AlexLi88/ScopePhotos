@@ -1,0 +1,121 @@
+#footer_main{
+
+    background: black;
+    position: relative;
+    padding: 2% 5%;
+}
+
+#footer_main .oneItem{
+
+    display: inline-block;
+    width: auto;
+    margin-right: 15px;
+    color: white;
+    padding: 0.5em;
+}
+
+#footer_main #fotter_left,#fotter_right{
+
+    display: inline-block;
+    vertical-align: top;
+}
+
+#footer_main #fotter_left{
+
+    width:70%;
+}
+
+#footer_main #fotter_right{
+
+    width:30%;
+    padding: 0.5em;
+}
+
+#footer_main #contact_info{
+
+    text-align: left;
+    display: inline-block;
+    color: white;
+    padding-left: 0.3em;
+}
+
+#fotter_right #download{
+
+    width:100%;
+}
+#footer_main #social_icons .oneIcon{
+
+    width: 40px;
+    height: 35px;
+    background-size: 200px !important;
+    background-repeat: no-repeat !important;
+    display: inline-block;
+}
+
+#fotter_right #download a{
+
+    display: inline-block;
+    width:40%;
+    margin-left: 4%;
+    display: inline-block;
+    width: 150px;
+    margin-left: 0%;
+    height: 55px;
+    background-size: 200%;
+    background-repeat: no-repeat;
+    background-position-x: 0px;
+}
+
+#fotter_right #download img{
+
+    width:100%;
+}
+
+@media only screen and (max-width: 800px){
+
+
+    #fotter_right #download a{
+
+        width: 49%;
+    }
+
+    #fotter_right #download #google_download{
+
+        background-position-x: -95px !important;
+    }
+}
+
+@media only screen and (max-width: 700px){
+
+    #footer_main .oneItem{
+        
+        font-size: 2vw;
+    }
+
+    #footer_main #footer_item{
+
+        margin-bottom: 2%;
+    }
+
+    #footer_main #fotter_left{
+
+        width:100%;
+    }
+
+    #footer_main .oneItem{
+
+        font-size: 3vw;
+        margin-right: 0;
+    }
+
+    #footer_main #fotter_right{
+
+        display: none;
+    }
+
+    #footer_main #download a{
+
+
+}
+
+}

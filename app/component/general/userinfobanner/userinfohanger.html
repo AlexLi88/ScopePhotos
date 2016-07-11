@@ -1,0 +1,51 @@
+<div id="userinfohanger_main" ng-show="true">
+
+<div id="user_tab" class="">
+
+        <div id="visitor" ng-show="userCtr.userType == 'visitor'">
+
+            <button ng-click="LogOrReg('login')">LOGIN</button>
+            <button style="
+
+                border: 1px solid #fa3535;
+    border-radius: 5px;
+    padding: .7em 0.9em;
+
+            " ng-click="LogOrReg('register')">REGISTER</button>
+        </div>
+        <div id="visitor_s" ng-click="LogOrReg('login')" ng-show="userCtr.userType == 'visitor'">
+
+            <i class="ui icon user" ng-style="{'background-image':'url('+ logini +')'}"></i>
+        </div>
+
+    <!--<div class="ui tiny buttons" ng-show="userCtr.userType == 'visitor'">-->
+        <!--<button class="ui green button" ng-click="showSideBarLogin()">Sign In</button>-->
+        <!--<div class="or"></div>-->
+        <!--<button class="ui blue button" ng-click="showSideBarLogin()">Register</button>-->
+    <!--</div>-->
+
+
+    <div id="uinfo" ng-show="userCtr.user" ng-click="toUser()">
+
+
+        <div id="user_ava"><img ng-src={{userCtr.user.avatar}}></div>
+        <div id="user_name">{{userCtr.user.name}}</div>
+
+        <!--<a class="ui image label" ng-click="toUser()">-->
+            <!--<img ng-src={{userCtr.user.avatar}}>-->
+            <!--{{userCtr.user.name}}-->
+            <!--<div class="detail">Scope User</div>-->
+        <!--</a>-->
+
+        <!--<a class="ui red label">-->
+
+            <!--Become a partner !-->
+        <!--</a>-->
+
+    </div>
+
+
+
+</div>
+
+</div>

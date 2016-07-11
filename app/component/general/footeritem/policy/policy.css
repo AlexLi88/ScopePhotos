@@ -1,0 +1,60 @@
+/*#privacypolicymain_title{*/
+
+    /*text-align: center;*/
+    /*padding: 2%;*/
+    /*font-size: 30px;*/
+    /*font-weight: 800*/
+/*}*/
+
+#privacypolicymain_title{
+
+    text-align: center;
+    padding: 2%;
+    font-size: 30px;
+    font-weight: 400;
+}
+
+#privacypolicymain_div{
+
+    padding: 2%;
+    margin-top: 15px;
+    font-family: "Source Sans Pro"
+}
+
+#privacypolicymain_content{
+
+    padding: 2%;
+    margin-top: 15px;
+}
+/*#faq_content h4{*/
+
+    /*margin-top: 20px;*/
+/*}*/
+
+/*#faq_sub_title{*/
+
+    /*text-align: center;*/
+    /*font-size: 15px;*/
+    /*font-weight: 400;*/
+/*}*/
+
+
+
+@media only screen and (max-width: 700px){
+
+
+    #privacypolicymain_div{
+
+        padding: 5% 1%;
+    }
+
+    #privacypolicymain_title{
+
+        margin-bottom: 3vw;
+    }
+
+    #privacypolicymain_content{
+
+         padding: 3vw;
+     }
+}

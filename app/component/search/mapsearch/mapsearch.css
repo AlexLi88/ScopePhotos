@@ -1,0 +1,340 @@
+#map_search_left,#map_search_right{
+
+    display: inline-block;
+}
+
+
+#map_search_main .container-fluid{
+
+    padding-left: 5%;
+    padding-right: 5%;
+
+}
+
+#map_search_main .ui[class*="right ribbon"].label:after{
+
+        border-width: 0.3em 1em 0 0;
+}
+
+#map_search_main .ui.label>.icon{
+
+    margin: 2px;
+}
+
+#map_search_main .ui.blue.label{
+
+    background-color: #4A90B9!important;
+}
+
+#map_search_main .ui.blue.ribbon.label{
+
+    border-color: #35637D!important;
+}
+
+
+ #map_search_main #map_search_title{
+
+        width: 100%;
+    position: relative;
+}
+
+#map_search_main #searchHanger_main{
+
+    margin-bottom: 0px
+}
+
+#map_search_main{
+
+    background: #F0F0F0;
+    min-height: 100vh;
+    font-family: "Source Sans Pro";
+    padding-bottom: 5%;
+}
+
+#map_search_left{
+
+    width:100%;
+    height: 350px;
+    background: white;
+}
+
+#map_search_left #map_control{
+
+    position: absolute;
+    top: 0;
+    width: 100%;
+    margin-top:0;
+    border-radius:0;
+    padding: 5px;
+    background: white;
+    text-align: right;
+    opacity: 1;
+    transition: opacity linear 0.5s;
+}
+
+#map_search_left #map_control button:active, #map_search_left #map_control button:focus{
+
+    outline-width: 0;
+}
+
+#map_search_left #map_control:hover{
+
+    opacity: 1;
+}
+
+#map_search_left #map {
+    width: 100%;
+    height: 100%;
+}
+
+#map_search_right{
+
+    width: 100%;
+    height: auto;
+}
+#map_search_right #image_search_list{
+
+    display: none;
+/*    padding-left: 15%;
+    padding-right: 15%;*/
+
+}
+#map_search_right .masonry-brick{
+
+    width: 24%;
+    margin-left: 1%;
+    margin-top: 0.2em;
+    display: inline-block;
+    opacity: 0;
+    transition: opacity 1s;
+    position: relative;
+    background: white;
+    border: 1px solid #ECEBEB;
+    /* transition: transform .5s,box-shadow .5s, opacity .5s; */
+}
+
+#map_search_right #image_search_list .ui[class*="right ribbon"].label{
+
+    top: 50px;
+    left: calc(100% + 1rem + 1.2em - 19px);
+    border-radius: 0px;
+    z-index: 2;
+    font-size: 20px;
+    padding: 5px 5px 5px 15px;
+    padding: 2%;
+    position: absolute;
+}
+
+
+
+#map_search_right  .masonry-brick.loaded{
+
+    opacity: 1;
+}
+
+#map_search_right ul{
+
+    padding: 0;
+}
+
+#map_search_right li{
+
+    list-style: none;
+}
+
+#map_search_right .masonry-brick img{
+
+    width:100%;
+    height: auto;
+    cursor: pointer;
+}
+
+#map_search_right .photo_info{
+
+    padding: 5%;
+    background: white;
+    word-break: break-all;
+    color: #636262;
+}
+
+.photo_info .info{
+     font-size: 0.8em;
+     font-weight: 600;
+
+}
+#map_search_right .photo_info .ui.basic.label{
+
+    color: grey;
+    font-weight: 500 !important;
+    border-color: grey;
+    border-radius: 0px;
+}
+
+
+
+#map_search_right .tag_list{
+
+    padding: 0;
+}
+
+#map_search_right .one_tag{
+
+    display: inline-block;
+    list-style:none;
+    margin-right: 2px;
+    margin-top: 3px;
+    cursor: pointer;
+}
+
+.userName_userAvatar{
+
+    width: auto;
+    z-index: 1;
+    padding: 1em;
+    position: relative;
+    padding-right: 0em;
+
+}
+.userAvatar{
+
+    width: 12%;
+    border-radius: 50%;
+    overflow: hidden;
+    display: inline-block;
+    vertical-align: top;
+}
+.userName_source{
+
+    display: inline-block;
+    padding: 0.2em 0.5em;
+    vertical-align: top;
+    width: 85%;
+}
+
+.userName_source .userName{
+
+    font-size: 1.05em;
+    font-weight: 600;
+}
+.userName_source .source{
+
+    font-size: 0.9em;
+    font-weight: 400;
+    color: grey;
+    line-height: 0.9em;
+}
+
+.time_location{
+
+    font-size: 0.9em;
+    font-weight: 400;
+    color: grey;
+    line-height: 1em;
+    margin-top: 3%;
+}
+
+.time_location .location{}
+
+.time_location div{
+
+    display: inline-block;
+}
+
+.time_location i.tiny.icon, i.tiny.icons{
+
+    line-height: 1;
+    font-size: .85714286rem;
+    margin-right: 0;
+}
+
+
+#map_search_right .selected_border{
+
+    width: 100%;
+    position: absolute;
+    height: 5px;
+    z-index: 1;
+    background: #DA7575;
+    -ms-transform: translateY(5px); /* IE 9 */
+    -webkit-transform: translateY(5px); /* Chrome, Safari, Opera */
+    transform: translateY(5px);
+    transition: all linear 0.2s;
+    opacity: 0;
+}
+
+#map_search_right .selected_border.show{
+
+    -ms-transform: translateY(0px); /* IE 9 */
+    -webkit-transform: translateY(0px); /* Chrome, Safari, Opera */
+    transform: translateY(0px);
+    opacity: 1;
+
+}
+
+#map_search_right #view_more_photo{
+
+    padding: 20px;
+    text-align: right;
+}
+
+#map_search_right #view_more_photo a{
+
+    padding: 5px;
+    background: white;
+    border: 1px solid;
+}
+
+@media only screen and (max-width: 700px) {
+
+    #map_search_right #image_search_list{
+
+      padding: 0px;
+    }
+
+    #map_search_right #image_search_list .ui[class*="right ribbon"].label{
+
+        display: none;
+    }
+
+    #map_search_right .photo_info{
+
+        display: none;
+    }
+
+}
+
+@media only screen and (max-width: 1250px) {
+
+    #map_search_right .masonry-brick{
+
+        width: 32% ;
+        margin-left: 0.8% ;
+    }
+
+}
+
+
+@media only screen and (max-width: 800px) {
+
+    #map_search_right .masonry-brick{
+
+        width: 49% ;
+        margin-left: 0.8% ;
+    }
+}
+
+@media only screen and (max-width: 700px) {
+
+    #map_search_right .masonry-brick{
+
+        margin-top: 0 !important;
+        margin-bottom: 0 !important;
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+        width: 100%;
+        border: 0;
+        border-top: 1px solid gainsboro;
+    }
+
+
+}

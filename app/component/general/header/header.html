@@ -1,0 +1,47 @@
+<div id="website_header" style="display:none">
+
+
+        <div id="menu_background"></div>
+        <div id="web_logo" ng-style="!showSearch && {'width':'45%'}" ng-click="backMain()">
+            <img id ='reg_logo' ng-src="{{logoW}}">
+            <img id ='sml_logo' ng-src="{{logoW_sml}}">
+        </div>
+
+        <div id="search" ng-style="!showSearch && {'display':'none'}" id="search_bar">
+            <form ng-submit="doSearch(searchValue)">
+            <div class="ui icon small fluid input">
+                <input type="text" placeholder="Search Social Images" ng-model="searchCtr.searchContent">
+                <i class="search link icon" ng-click="doSearch(searchContent)" ng-style="{'background-image':'url('+ searchi +')'}"></i>
+            </div>
+            </form>
+        </div><!----><div id="header_left"><div id="download_bt_sm">
+                    <i class="ui icon white basic download" ng-click="downloadApp()" ng-style="{'background-image':'url('+ downloadi +')'}"></i>
+            </div>
+
+
+            <div id="download_bt">
+                <span>Get Our App</span>
+                <a target="_blank" href="https://itunes.apple.com/app/id911111086" ng-mouseover="hoverApp = true" ng-mouseleave="hoverApp = false" ng-style="!hoverApp && {'background-image':'url('+ appleu +')'} || {'background-image':'url('+ apples +')'}">
+                </a>
+                <a target="_blank" href="https://play.google.com/store/apps/details?id=com.scopemedia.android" ng-mouseover="hoverAnd = true" ng-mouseleave="hoverAnd = false" ng-style="!hoverAnd && {'background-image':'url('+ androidu +')'} || {'background-image':'url('+ androids +')'}">
+                </a>
+            </div><!--
+
+           --><div id="user_control">
+
+           <userinfohanger></userinfohanger>
+        </div>
+
+
+
+        </div>
+
+
+        <!--<div class="item" id="get_our_app">-->
+
+
+            <!--<button class="ui button" ng-click="showGetOurApp()">Get Our App</button>-->
+
+        <!--</div>-->
+
+</div>

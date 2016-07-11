@@ -1,0 +1,82 @@
+#banner_main {
+
+    position: fixed;
+    bottom: -1px;
+    width: 100%;
+    height: auto;
+    background: white;
+    z-index: 5;
+    opacity: 1.0;
+    font-size: 4.4vw;
+    color: black;
+    text-align: center;
+    /*display: none;*/
+    font-family: 'Source Sans Pro' !important;
+
+}
+#banner_info{
+
+    font-size: 1.3em;
+    padding: 0.5em;
+    text-align: center;
+}
+
+#banner_main a{
+
+    display: block;
+    width: 100%;
+    height: 100%;
+    padding: 15px;
+    color: white;
+}
+
+#banner_main a:focus,#banner_main a:active{
+
+    text-decoration: none;
+}
+
+#banner_info_left{
+    
+    height: 2em;
+    display: inline-block;
+    background-size: cover;
+    width: 2em;
+}
+#banner_info_right{
+
+    display: inline-block;
+    vertical-align: top;
+    padding: .5em;
+    padding-left: .2em;
+    font-weight: 500;
+    font-size: 1em;
+    letter-spacing: 0.05em;
+}
+
+#banner_options{
+    padding: 0.5em;
+    text-align: right;
+}
+
+#banner_options button{
+
+    background: none;
+    border: none;
+    letter-spacing: 0.05em;
+    color: #ff5757;
+    margin-right: 5%;
+}
+
+
+#banner_options button:focus{
+
+    outline-width: 0px;
+}
+
+#banner_options #downloadButton{
+
+    background: #ff5757;
+    border-radius: 5px;
+    color: white;
+    padding: .5em .7em;
+}

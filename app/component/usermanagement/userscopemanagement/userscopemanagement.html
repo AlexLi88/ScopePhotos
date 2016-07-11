@@ -1,0 +1,43 @@
+<div id="userscopemanagement_main" class="container">
+
+
+
+    <div id="user_image_list">
+
+            <div class="ui tall segment one_user_scope"
+                 ng-repeat="scope in userScopeManagementCtr.scopeArr" ng-mouseover="showScopeBg($event)" ng-mouseleave="hideScopeBg($event)">
+
+                <div class="scope_info">
+                    <a class="header_background" ng-href="{{'#/imagesearch?searchType=scope&searchContent=' + scope.caption + '&searchId=' + scope.id }}"></a>
+                    <div class="edit_scope_button" ng-show="userScopeManagementCtr.userType =='owner'" ng-click="editScope(scope)"><i class="icon pencil"></i></div>
+                </div>
+
+
+                <div class="ui header small scope_header" ng-show="!scope.$$showImage">
+                         <div class="header">{{scope.caption}}</div>
+
+                         <div class="scope_stats">
+
+                                <span><i class="heart icon"></i>{{scope.stats.likeCount}}</span>
+                                <span><i class="share icon"></i>{{scope.stats.shareCount}}</span>
+                                <span><i class="eye icon"></i>{{scope.stats.viewCount}}</span>
+
+                         </div>
+                </div>
+
+                <div class="blurring dimmable scope">
+                <a ng-style="{'background-image':'url('+scope.coverImage+')'}" ng-href="{{'#/imagesearch?searchType=scope&searchContent=' + scope.caption + '&searchId=' + scope.id }}"></a></div>
+
+
+            </div>
+    </div>
+
+
+</div>
+
+
+
+
+
+    <loadinganimation ng-show="updating"></loadinganimation>
+</div>

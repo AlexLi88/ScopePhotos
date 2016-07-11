@@ -1,0 +1,64 @@
+<div id="editscope_main" class="container">
+
+    <div id="edit_baisc_info">
+
+        <div class="ui buttons">
+            <button id="edit_info" class="ui teal button" ng-click="editBasicInfo()">Edit Baisc Info</button>
+            <button class="ui blue button" ng-click="returnToUserScope()">Done</button>
+        </div>
+
+
+        <!--<button id="edit_info" ng-click="editBasicInfo()">Edit Baisc Info</button>-->
+        <!--<button id="done_edit" ng-click="returnToUserScope()">Done</button>-->
+    </div>
+
+
+    <div class="ui horizontal divider">
+
+            <!--<i class="setting icon"></i>-->
+            <!--<div class="content">-->
+                <!--Photo Moderation-->
+            <!--</div>-->
+
+        <h2 class="ui icon header">
+            <i class="setting icon"></i>
+            <div class="content">
+                Photo Moderation
+            </div>
+        </h2>
+
+    </div>
+
+    <div id="scope_image_list">
+
+        <div class="card one_scope_image" ng-repeat="image in editScopeCtrl.imageArr">
+
+            <div id = "photo_moderate_control">
+
+                <a class="ui blue basic label" ng-show="!image.curated" ng-click="curateImage(image,$event)">
+                    <i class="eye icon"></i>Image Show
+                </a>
+
+                <a class="ui red basic label" ng-show="image.curated" ng-click="curateImage(image,$event)">
+                    <i class="eye icon"></i>Image Hide
+                </a>
+
+            </div>
+                <!--<div class="ui label"><i class="fa fa-eye" ng-show="!image.curated" ng-click="curateImage(image)"></i>Show Image</div><i class="fa fa-eye-slash" ng-show="image.curated" ng-click="curateImage(image)"></i></div>-->
+
+
+
+
+
+
+            <div class="image">
+
+                        <img ng-src="{{image.thumbnail.fileName}}">
+                </div>
+        </div>
+
+
+
+    </div>
+
+</div>

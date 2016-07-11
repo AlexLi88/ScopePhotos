@@ -1,0 +1,49 @@
+#editscope_main .one_scope_image{
+
+
+    display: inline-block;
+    width: 19%;
+    margin-left: 1%;
+    margin-top: 5px;
+    height: 200px;
+    overflow: hidden;
+    border: 1px solid gainsboro;
+}
+
+
+#editscope_main .one_scope_image img{
+
+
+    width: 100%;
+    height: auto;
+}
+
+#editscope_main #edit_baisc_info{
+
+    padding: 10px;
+    text-align: right;
+}
+
+#editscope_main .ui.icon.header{
+
+
+    height: auto;
+}
+
+
+#editscope_main #photo_moderate_control{
+
+    position: absolute;
+    width: 105px;
+    height: 30px;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    margin: auto;
+}
+
+#editscope_main .one_scope_image{
+
+    position: relative;
+}

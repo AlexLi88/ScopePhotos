@@ -1,0 +1,389 @@
+#searchHanger_main{
+
+    border-bottom: 2px solid darkgrey;
+    background: white;
+    height:75px;
+    margin-bottom: 30px;
+}
+
+#searchHanger_main #searchOptionTag .disable:hover{
+
+    cursor: inherit;
+}
+#searchHanger_main #searchOptionTag .disable{
+
+    opacity: 0.3;
+}
+
+#searchHanger_main #s_and_p{
+
+
+}
+
+#searchHanger_main #s_and_p .icon{
+
+    font-size: 1.5em;
+    background: transparent;
+}
+
+#searchHanger_hanger #searchOptionTag{
+
+    position: absolute;
+    width: 90%;
+    bottom: 0px;
+    margin-left: 143px;
+}
+
+ #embedurl.ui.mini.input input{
+
+    font-size: 1.2em;
+}
+
+
+#searchHanger_hanger .ui.secondary.pointing.menu .item{
+
+    padding-bottom: 15px !important;
+    font-family: Source Sans Pro;
+    font-size: 1.2em;
+    color: grey;
+}
+
+#searchHanger_hanger .ui.secondary.pointing.menu .item.active{
+
+    color: #333333;
+    font-weight: 700;
+    border-color: #fa3535;
+    border-bottom: 3px solid red;
+}
+
+#searchHanger_main #displayControl{
+
+    position: absolute;
+    right: 2%;
+    bottom: 25%;
+}
+
+#searchHanger_main .ui.top.left.pointing.dropdown>.menu{
+
+    padding: 1em;
+    background: #3D3139;
+    width: 270px;
+    font-family: Source Sans Pro;
+}
+
+#searchHanger_main #live_button{
+
+    width: 6.57em;
+    height: 2.4em;
+    background-size: contain;
+    background-color: white;
+    border-radius: 0px;
+    border: 0px;
+    background-repeat: no-repeat;
+    position: relative;
+    vertical-align: top;
+}
+
+#searchHanger_main #present_and_share{
+
+    border: 0px solid #ff5757 !important;
+}
+
+#searchHanger_main #present_and_share{
+
+    box-shadow: 0 0 0 1px #ff5757 inset!important;
+    color: #ff5757!important;
+    margin-right: 5px;
+
+}
+
+#searchHanger_main #live_button:hover{
+
+    outline-width: 0px;
+}
+
+#searchHanger_main #live_button:focus{
+
+    outline-width: 0px;
+}
+
+#searchHanger_main  .ui.dropdown .menu>.item{
+
+    display: inline-block;
+    width: 32%;
+    margin-left: 1%;
+    line-height: 1em;
+    overflow: hidden;
+    padding: 0 !important;
+    cursor: inherit;
+}
+
+#searchHanger_main  .symb_con{
+
+    padding: 0.5em 0.8em
+}
+
+#searchHanger_main  .symb{
+
+    border: 2px solid #fa3535;
+    border-radius: 5px;
+    padding: 0.2em;
+    margin-top: 10%;
+}
+
+#searchHanger_main .symb:hover{
+
+    background: #fa3535;
+    cursor: pointer;
+}
+
+#searchHanger_main .symb.selected{
+
+    background: #fa3535;
+}
+
+.symb img{
+
+    width:100%;
+}
+
+.item_ti{
+
+    color: white;
+    font-size: 0.7em;
+    margin-top: 5%;
+    line-height: 1.5em;
+    text-align: center;
+    width: 100%;
+    font-weight: 500;
+    text-transform: inherit;
+}
+
+#searchHanger_main .ui.top.left.pointing.dropdown #title{
+
+    color: white;
+    font-size: 1em;
+    text-transform: uppercase;
+    padding: 0.5em;
+
+}
+
+#searchHanger_main .ui.top.left.pointing.dropdown>.menu:after{
+
+    background: #3D3139;
+}
+
+
+
+#searchHanger_main #present_and_share{
+
+    padding: .802em;
+    position: relative;
+    top: 1px;
+    border: 0px solid #ff5757 !important;
+    box-shadow: 0 0 0 1px #ff5757 inset!important;
+    color: #ff5757!important;
+    margin-right: 5px;
+
+}
+#searchHanger_main #displayOption,#embed_and_presnet{
+
+    margin-right: 5px;
+}
+
+#searchHanger_main #displayOption .ui.button{
+
+    padding: 0.7em 2em;
+    background: 0 0;
+    border: 1px solid #ff5757;
+    color: #ff5757;
+    font-size: 0.923rem;
+    position: relative;
+    top: 1px;
+}
+
+#searchHanger_main #embed_and_present{
+
+    padding: 0.7em 2em;
+    border: 1px solid #ff5757;
+    font-size: 0.923rem;
+    position: relative;
+    top: 1px;
+    background: #FF5757;
+    color: white;
+}
+
+#searchHanger_main #displayOption .ui.button.active{
+
+    background: #FF5757;
+    color: white;
+}
+
+#searchHanger_main #displayControl #d_opinoin{
+
+    border: black 1px solid;
+    color: black !important;
+    padding: .7em !important;
+    position: relative !important;
+    top: .0em !important;
+    box-shadow: none !important;
+}
+
+#searchHanger_main .ui.buttons>.ui.dropdown:last-child .menu{
+
+    margin-top: 3px;
+}
+
+/*#searchHanger_main .ui.labeled.icon.button>.icon, .ui.labeled.icon.buttons>.button>.icon{
+
+    background-color: transparent;
+}*/
+
+#searchHanger_main .ui.basic.active.button, .ui.basic.buttons .active.button{
+
+    box-shadow: none;
+    background: #3D3139 !important;
+    color: white !important;
+
+}
+
+.blinking{
+
+    animation: blinker 1s linear infinite;
+    background-color: transparent;
+}
+
+@keyframes blinker {
+
+  50% { opacity: 0.0; }
+}
+
+
+@media only screen and (max-width: 800px){
+
+    .searchHanger_one_type{
+
+        font-size: 15px;
+    }
+
+    #searchHanger_main #displayControl #d_opinoin{
+
+        top: .05em !important;
+    }
+
+    #searchHanger_main #live_button{
+
+        margin-top: 0.15em;
+    }
+
+}
+
+@media only screen and (max-width: 800px) {
+
+    #searchHanger_hanger #searchOptionTag {
+
+        margin-left: 40px;
+        width: 100vw;
+    }
+
+    #searchHanger_main .ui.top.left.pointing.dropdown > .menu {
+
+        width: 40vw;
+    }
+
+    #searchHanger_main #displayControl {
+
+        right: 0;
+        margin-right: 5px;
+        top: 5%;
+    }
+
+    #searchHanger_main #displayOption,#searchHanger_main #embed_and_present {
+
+        margin-right: 0px;
+        position: relative;
+        top:2px;
+        font-size:0.78rem;
+    }
+
+    #searchHanger_main #present_and_share {
+
+        margin-right: 0px;
+    }
+
+    #searchHanger_main #displayControl #d_opinoin {
+
+        font-size: 1.5vw;
+        padding: .78em !important;
+    }
+
+}
+
+
+@media only screen and (max-width: 700px){
+
+    #displayOption{
+
+        /*display: none;*/
+    }
+
+    #searchHanger_main #displayOption{
+
+        top:1px;
+    }
+    
+    #searchHanger_main #live_button{
+
+        width: 96px;
+        height: 3em;
+        top:1px;
+        margin-top: 0em;
+
+    }
+
+    #searchHanger_hanger #searchOptionTag{
+
+        margin-left: 0px;
+    }
+
+    #searchHanger_hanger .ui.secondary.pointing.menu .item{
+
+        font-size: 1em;
+        padding: 5vw;
+        padding-bottom: 3vw !important;
+    }
+
+    #searchHanger_main #displayControl{
+
+        margin-right: 1%;
+        top: 1%;
+        font-size: 3.2vw;
+        display: inline-block;
+    }
+    #searchHanger_main #displayControl #d_opinoin,#present_and_share{
+
+        font-size: 8px;
+        /*top: 2px;*/
+    }
+
+
+    #searchHanger_main{
+
+        margin-bottom: 0px;
+    }
+
+    #searchHanger_main .ui.top.left.pointing.dropdown>.menu{
+
+        width: 50vw;
+    }
+    #searchHanger_main .symb_con{
+
+        padding: 0.1em 0.3em;
+    }
+
+    #searchHanger_main #displayControl .button{
+
+        padding: .872em;
+    }
+
+}

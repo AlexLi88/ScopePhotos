@@ -1,0 +1,80 @@
+#presentandshare_main #singleimage_main{
+
+    #photoManagement_imageList{
+
+        text-align: center;
+        padding-top:2% !important;
+
+    }
+
+    .photoManagement_oneImage {
+
+        width: 55vw;
+        margin-left: 0;
+        display: inline-block;
+        opacity: 1;
+        transition: opacity 1s;
+        position: relative;
+        vertical-align: top;
+        box-shadow: none;
+        border-radius: 5px;
+        padding: 1em;
+        box-shadow: 8px 8px 10px rgba(0, 0, 0, 0.16);
+
+        .userName_userAvatar {
+
+            display: inline-block;
+            width: 30%;
+            vertical-align: top;
+            padding: 0;
+        }
+
+        .userName_source {
+
+            width: 76%;
+            margin-left: 2%;
+        }
+
+        .userAvatar{
+
+            width: 20%;
+        }
+
+        .one_tag{
+
+            margin-top:0.2em;
+        }
+
+    }
+
+    .image_info_section{
+
+        padding: 1.5em 1em;
+    }
+
+    .photoContainer{
+
+        height: 70vh;
+        max-height: 600px;
+    }
+
+    .photoContainer img{
+
+        max-height: 100%;
+        max-width: 100%;
+        width: inherit;
+        height: inherit;
+    }
+
+    #photoManagement_imageList .photo_info {
+
+        display: inline-block;
+        width:69%;
+        vertical-align: top;
+        padding: 0;
+        text-align: left;
+    }
+
+}
+
+

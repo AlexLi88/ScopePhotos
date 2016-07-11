@@ -1,0 +1,91 @@
+    <div id="user_management_main">
+
+    <div class="" id="user_avatar_info">
+
+        <h4 class="ui header">
+            <div id="logout_button" ng-show="userCtr.userType =='owner'"><button class="ui red tiny basic button" ng-click="userLogout()">Log Out</button></div>
+            <div id="follow_button" ng-show="userCtr.userType =='visitor' && !userCtr.user.followed"><button class="ui red tiny basic button" ng-click="followUser(userCtr.user)"><i class="icon add user"></i>Follow</button></div>
+            <div id="unfollow_button" ng-show="userCtr.userType =='visitor' && userCtr.user.followed"><button class="ui red tiny button" ng-click="unFollowUser(userCtr.user)"> <i class="user icon"></i>Followed</button></div>
+        <div id="user_ava">
+
+            <img class="ui avatar image" ng-src="{{userCtr.user.avatar}}">
+
+        </div>
+
+        <div id="user_info">
+
+            <div class="ui small header" ng-bind="userCtr.user.name"></div>
+
+        </div>
+
+            <div id="user_email">
+
+                <div class="item" ng-bind="userCtr.user.email"></div>
+
+            </div>
+
+            <!--<div id="user_stat">-->
+                <!--<div class="ui basic blue label">-->
+                    <!--Photos-->
+                    <!--<div class="detail">{{userCtr.user.stats.numOfMedia}}</div>-->
+                <!--</div>-->
+                <!--<div class="ui basic blue label">-->
+                    <!--Scopes-->
+                    <!--<div class="detail">{{userCtr.user.stats.numOfTotalEvents}}</div>-->
+                <!--</div>-->
+                <!--<div class="ui  basic blue label">-->
+                    <!--Following-->
+                    <!--<div class="detail">{{userCtr.user.stats.numOfFollowings}}</div>-->
+                <!--</div>-->
+                <!--<div class="ui  basic blue label">-->
+                    <!--Followers-->
+                    <!--<div class="detail">{{userCtr.user.stats.numOfFollowers}}</div>-->
+                <!--</div>-->
+
+            <!--</div>-->
+
+            <div class="ui pointing secondary menu" id="user_menu">
+
+                <a class="black item" ng-class="userCtr.currentView == 'photo' && 'active' || '' " ng-click="toUserPhoto()">
+                    <div class="user_menu_staes">{{formateCount(userCtr.user.stats.numOfMedia)}}</div>
+                    Photos
+                </a>
+
+                <a class="item" ng-class="userCtr.currentView == 'scope' && 'active' || '' " ng-click="toUserScope()">
+                    <div class="user_menu_staes">{{formateCount(userCtr.user.stats.numOfTotalEvents)}}</div>
+                    Scopes
+                </a>
+
+                <a class="item" ng-class="userCtr.currentView == 'favorite' && 'active' || '' " ng-click="toUserFavorite()">
+                    Favorite
+                </a>
+
+                <a class="item" ng-class="userCtr.currentView == 'following' && 'active' || '' " ng-click="toUserFollowing('following')">
+                    <div class="user_menu_staes">{{formateCount(userCtr.user.stats.numOfFollowings)}}</div>
+                    Following
+                </a>
+
+                <a class="item" ng-class="userCtr.currentView == 'follower' && 'active' || '' " ng-click="toUserFollower('general')">
+                    <div class="user_menu_staes">{{formateCount(userCtr.user.stats.numOfFollowers)}}</div>
+                    Followers
+                </a>
+
+            </div>
+
+
+
+        </h4>
+
+    </div>
+
+
+
+    <div>
+        <!--<userphotomanagement numOfMedia="{{userCtr.user.stats.numOfMedia}}" ng-show="userCtr.currentView =='photo'"></userphotomanagement>-->
+        <!--<userscopemanagement numOfEvent="{{userCtr.user.stats.numOfTotalEvents}}" ng-show="userCtr.currentView =='scope'"></userscopemanagement>-->
+    </div>
+
+    <editpopup></editpopup>
+    <div ui-view style="padding-top: 2%;min-height:100vh;background: #F0F0F0;"></div>
+
+</div>

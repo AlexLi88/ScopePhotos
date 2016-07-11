@@ -1,0 +1,139 @@
+#user_management_main{
+
+
+    /*padding: 3%;*/
+    font-family: "Source Sans Pro";
+    padding-bottom: 5%;
+    padding-top: 0%;
+    display: none;
+    background: #F0F0F0;
+}
+
+
+
+#user_management_main #user_avatar_info{
+
+    text-align: center;
+    border-radius: 0px;
+    padding: 4%;
+    padding-bottom: 0%;
+    padding-top: 1%;
+    border-bottom: 1px solid gainsboro;
+    background-color: white;
+    position: relative;
+}
+
+#user_management_main #user_ava{
+
+    width: auto;
+    text-align: center;
+    display: inline-block;
+    margin-top: 10px;
+}
+
+#user_management_main #user_info{
+
+    display:block;
+    margin-top: 2%;
+    font-size: 1.3em;
+}
+
+#user_management_main .ui.secondary.pointing.menu{
+
+    margin-left: 0;
+    margin-right: 0;
+    max-width: 700px;
+    margin: auto;
+    margin-top: 2%;
+    border-bottom: 0px;
+}
+#user_management_main .ui.secondary.pointing.menu .active.item{
+
+    background-color: transparent;
+    box-shadow: none;
+    border-bottom: 5px solid #ff5757;
+}
+
+#user_management_main #user_ava img{
+
+    border-radius: 50%;
+    width: 100px;
+    height: auto;
+}
+
+#user_management_main #user_email{
+
+    color: gainsboro;
+}
+
+#user_management_main #logout_button,#follow_button,#unfollow_button{
+
+    right: 20px;
+    top: 20px;
+    position: absolute;
+
+}
+
+#user_management_main #user_stat{
+
+    padding: 5px;
+    margin-top: 15px;
+
+}
+
+#user_management_main #user_menu .item{
+
+    width: 20%;
+    display: inline-block;
+    text-align: center;
+    font-size: 1.2em;
+    font-weight: bolder;
+    color: grey;
+}
+
+#user_management_main #user_menu .item .user_menu_staes{
+
+    margin-bottom: 5%;
+    color: #F18181;
+    font-size: 0.9em;
+}
+
+@media only screen and (max-width: 700px){
+
+    #user_management_main  .divider.header{
+
+        width: 100%;
+        display: block;
+    }
+
+    #user_management_main #user_ava img{
+        height: auto;
+        width: 65%;
+    }
+
+    #user_management_main #user_menu .item{
+
+        font-size: 0.7em;
+        padding: 0.2em;
+    }
+    #user_management_main #user_menu .item .user_menu_staes{
+
+        font-size: 1.1em;
+    }
+
+    #user_management_main #logout_button, #follow_button, #unfollow_button{
+
+        right: 10px;
+    }
+
+    #user_management_main .ui.basic.red.button, .ui.basic.red.buttons .button{
+
+        font-size: 0.7em;
+    }
+
+    #user_management_main .ui.secondary.pointing.menu .active.item{
+
+        border-bottom: 3px solid #ff5757;
+    }
+}
+

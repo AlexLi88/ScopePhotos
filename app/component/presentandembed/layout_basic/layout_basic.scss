@@ -1,0 +1,97 @@
+#presentandembed_main{
+
+
+  #basiclayout_main{
+
+    .photoManagement_oneImage{
+
+      width: 19.8%;
+      margin-left: 0.2%;
+      margin-top: 5px;
+      display: inline-block;
+      opacity: 0;
+      transition: opacity 1s;
+      position: relative;
+      background: white;
+      vertical-align: top;
+      border: 1px solid #ECEBEB;
+      box-shadow: none;
+      /* transition: transform .5s,box-s*/
+
+    }
+    .photoManagement_oneImage.masonry-brick.loaded{
+
+      opacity: 1;
+    }
+
+
+
+    #photoManagement_imageList{
+
+      padding: 0 !important;
+      padding: 0 !important;
+      /*max-width: 1200px;*/
+      margin: auto;
+      background: #f0f0f0;
+    }
+
+    #photoManagement_imageList .photo_info{
+
+      padding: 5%;
+      background: #fff;
+      word-break: break-all;
+      color: #636262;
+    }
+
+
+
+  }
+
+
+
+}
+
+@media only screen and (max-width: 1250px) {
+
+  #presentandembed_main #basiclayout_main .photoManagement_oneImage{
+
+    width: 24% !important;
+    margin-left: 0.8% !important;
+  }
+
+}
+
+
+@media only screen and (max-width: 1000px) {
+
+
+  #presentandembed_main #basiclayout_main .photoManagement_oneImage{
+
+    width: 32% !important;
+    margin-left: 0.8% !important;
+  }
+}
+
+@media only screen and (max-width: 800px) {
+
+  #presentandembed_main #basiclayout_main .photoManagement_oneImage{
+
+    width: 49% !important;
+    margin-left: 0.8% !important;
+  }
+
+}
+@media only screen and (max-width: 450px) {
+
+  #presentandembed_main #basiclayout_main  .photoManagement_oneImage{
+
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    width: 100% !important;
+    border: 0;
+    border-top: 1px solid gainsboro;
+  }
+}
+

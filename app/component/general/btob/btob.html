@@ -1,0 +1,139 @@
+<div id="btob_main">
+
+    <div id="top_container" ng-style="{'background':'url(' + bg +')'}">
+
+            <div id="container">
+
+                <div id="title">Partnership</div>
+                <div id="content">
+                    Use <b>Scope</b> to help grow your business! Understand and connect with your ever-growing
+                    audience's activities across major social media platforms.
+                </div>
+
+            </div>
+
+    </div>
+    <div id="middle_container">
+
+            <!--<div id="middle_title">Become a Scope Partner</div>-->
+            <!--<div id="middle_content">-->
+                <!--Scope’s Partner Program provides the opportunity for your company to be-->
+                <!--featured prominently within the Scope App! Working with Scope enables you to-->
+                <!--become an important part of the partner ecosystem. By becoming a Partner, you-->
+                <!--have the opportunity to not only understand the big picture of all your social-->
+                <!--media efforts, but to further engage with customers. If you are interested in-->
+                <!--becoming a Scope Partner, please reach out to us and we would be happy to-->
+                <!--discuss various options.-->
+            <!--</div>-->
+
+            <div id="divider">
+                <div id="divider_header">Benefits</div>
+            </div>
+
+
+            <div id="top_benefits">
+                <div class="benefit_container">
+                <div class="one_benefit">
+                    <div class="logo_content" ng-style="{'background':'url(' + audience_icon +')'}">
+                    </div>
+                    <div class="content">
+                        Become a featured business on the app home page
+                    </div>
+                </div><!--
+                    --><div class="one_benefit">
+                        <div class="logo_content" ng-style="{'background':'url(' + big_screens_icon +')'}">
+                        </div>
+                        <div class="content">
+                            Ability to view “The Big Picture” by pulling images via the biggest players
+                            in social media
+                        </div>
+                    </div><!--
+                    --><div class="one_benefit">
+                        <div class="logo_content" ng-style="{'background':'url(' + business_icon +')'}">
+                        </div>
+                        <div class="content">
+                            Get an accurate view of your audience’s engagement through in app
+                            impression counts
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="bottom_benefits">
+                <div class="benefit_container">
+
+                    <div class="one_benefit">
+                        <div class="logo_content" ng-style="{'background':'url(' + events_icon +')'}">
+                        </div>
+                        <div class="content">
+                            Ability to view “The Big Picture” by pulling images via the biggest players
+                            in social media
+                        </div>
+                    </div><!--
+                    --><div class="one_benefit">
+                    <div class="logo_content" ng-style="{'background':'url(' + share_icon +')'}">
+                    </div>
+                    <div class="content">
+                        Get an accurate view of your audience’s engagement through in app
+                        impression counts
+                    </div>
+                </div>
+
+                </div>
+            </div>
+    </div>
+
+    <div id="bottom_container" ng-style="{'background':'url(' + signin_background +')'}">
+
+
+         <form id="partner_container" ng-submit="submitBusinessPartner()">
+
+             <div id="form_title">Sign up for Partnership</div>
+
+             <div id="success_info" ng-show = "signUpSuccess">
+                Thank you! Your application has been successfully submitted.
+             </div>
+
+             <div id="before_success" ng-show="!signUpSuccess">
+             <div class="form_content">
+                    <div class="form_title">CONTACT PERSON<span>*</span></div>
+                    <input ng-model="signup_contactPerson" required></input>
+             </div><!--
+             --><div class="form_content">
+             <div class="form_title">EMAIL<span>*</span></div>
+             <input ng-model="signup_contectEmail" type="Email" required></input>
+            </div><!--
+            --><div class="form_content">
+             <div class="form_title">COMPANY/ORGANIZATION<span>*</span></div>
+             <input ng-model="signup_company" required></input>
+         </div><!--
+            --><div class="form_content">
+             <div class="form_title">CITY</div>
+             <input ng-model="signup_city" ></input>
+         </div><!--
+            --><div class="form_content">
+             <div class="form_title">WEBSITE URL<span>*</span></div>
+             <input ng-model="signup_website" required></input>
+         </div><!--
+            --><div class="form_content">
+             <div class="form_title">PHONE NUMBER</div>
+             <input ng-model="signup_phoneNumber"></input>
+         </div><!--
+            --><div class="form_content nob">
+             <div class="form_title">NATURE OF BUSINESS</div>
+             <textarea ng-model="signup_nob"></textarea>
+         </div>
+
+
+
+             <div id="msg">We will review your application and get back to you soon</div>
+             <div id="submit_button"><button type="submit">Submit</button>
+
+             </div>
+
+             </div>
+         </form>
+
+    </div>
+
+
+</div>

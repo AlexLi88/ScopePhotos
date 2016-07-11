@@ -1,0 +1,497 @@
+#presentandshare_main #header .ui.icon.header .content{
+
+    cursor: auto;
+}
+
+#presentandshare_main #settting{
+
+    font-size: 2.0em;
+    padding: 0 0.5em 0.2em 0;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+
+#presentandshare_main #header{
+
+
+    position: relative;
+    border-radius: 5px;
+
+}
+#presentandshare_main #searchHanger_hanger #searchOptionTag{
+
+    display: none;
+}
+#presentandshare_main #searchHanger_main{
+
+    margin-bottom: 5px;
+    background: transparent;
+    border: none;
+}
+#presentandshare_main #searchHanger_main #live_button{
+
+    background-color: transparent;
+}
+
+#presentandshare_main #scope_title{
+
+    text-align: center;
+    padding: 0.5em;
+    line-height: 1em;
+    font-size: 2.5em;
+    font-weight: 200;
+    background: white;
+    color: grey;
+    position: relative;
+}
+
+
+#presentandshare_main #header .ui.header:last-child{
+
+    overflow: visible;
+}
+
+#presentandshare_main .blinking {
+    animation: blink-animation 1s steps(5, start) infinite;
+    -webkit-animation: blink-animation 1s steps(5, start) infinite;
+}
+@keyframes blink-animation {
+    to {
+        visibility: hidden;
+    }
+}
+@-webkit-keyframes blink-animation {
+    to {
+        visibility: hidden;
+    }
+}
+
+
+#presentandshare_main #header #scope_title{
+
+    display: inline-block;
+    text-align: center;
+    font-size: 1.5em;
+    font-weight: bolder;
+    margin-left: 2%;
+    border-left: 2px solid white;
+    vertical-align: bottom;
+    padding: 2em 2% 0.5em 2%;
+}
+
+
+
+
+
+
+
+
+
+
+
+#presentandshare_main{
+
+    background: #F0F0F0;
+    min-height: 100vh;
+    font-family: "Source Sans Pro";
+}
+
+#presentandshare_main  #image_search_title{
+
+    width: 100%;
+    position: relative;
+}
+
+#presentandshare_main .large{
+
+    padding-left: 0 !important;  padding-right: 0 !important;
+}
+
+#presentandshare_main #photoManagement_imageList li{
+
+    display: inline-block;
+    list-style: none;
+    margin-top: 0.5em;
+}
+
+#presentandshare_main .container-fluid{
+
+    padding-left: 0%;
+    padding-right: 0%;
+    padding-bottom: 5%;
+}
+
+#presentandshare_main .photoContainer:hover{
+
+    cursor: pointer;
+
+}
+
+#presentandshare_main #photoManagement_imageList .photo_caption{
+
+    padding: 2%;
+    margin-bottom: 0px;
+    word-break: break-all;
+}
+#presentandshare_main #photoManagement_imageList .ui[class*="right ribbon"].label{
+
+    top: 50px;
+    left: calc(100% + 1rem + 1.2em - 19px);
+    border-radius: 0px;
+    z-index: 2;
+    font-size: 20px;
+    padding: 5px 5px 5px 15px;
+    padding: 2%;
+    position: absolute;
+}
+
+#presentandshare_main #photoManagement_imageList .ui[class*="right ribbon"].label:after{
+
+    border-width: 0.3em 1em 0 0;
+}
+
+#presentandshare_main #photoManagement_imageList .ui.label>.icon{
+
+    margin: 2px;
+}
+
+#presentandshare_main #photoManagement_imageList .ui.blue.label{
+
+    /*background-color: #4A90B9!important;*/
+}
+
+#presentandshare_main #photoManagement_imageList .ui.blue.ribbon.label{
+
+    border-color: #35637D!important;
+}
+
+#presentandshare_main .selected_border{
+
+    width: 100%;
+    position: absolute;
+    height: 5px;
+    z-index: 1;
+    background: #DA7575;
+    -ms-transform: translateY(5px); /* IE 9 */
+    -webkit-transform: translateY(5px); /* Chrome, Safari, Opera */
+    transform: translateY(5px);
+    transition: all linear 0.2s;
+    opacity: 0;
+    top:0;
+}
+
+#presentandshare_main .selected_border.show{
+
+    -ms-transform: translateY(0px); /* IE 9 */
+    -webkit-transform: translateY(0px); /* Chrome, Safari, Opera */
+    transform: translateY(0px);
+    opacity: 1;
+
+}
+
+#presentandshare_main #basiclayout_main #photoManagement_imageList{
+
+    padding: 0 !important;
+    padding: 0 !important;
+    /*max-width: 1200px;*/
+    margin: auto;
+    background: #f0f0f0;
+}
+
+#presentandshare_main #image_search_main #photoManagement_imageList .image_time_location{
+
+    padding: 5%;
+    font-size: 13px;
+    color: grey;
+    text-align: right;
+}
+
+#presentandshare_main #photoManagement_imageList img{
+
+    width:100%;
+    height: auto;
+}
+
+#presentandshare_main #basiclayout_main .photoManagement_oneImage{
+
+    width: 19.5%;
+    margin-left: 0.4%;
+    margin-top: 5px;
+    display: inline-block;
+    opacity: 0;
+    transition: opacity 1s;
+    position: relative;
+    background: white;
+    vertical-align: top;
+    border: 1px solid #ECEBEB;
+    box-shadow: none;
+    /* transition: transform .5s,box-shadow .5s, opacity .5s; */
+}
+
+#presentandshare_main #basiclayout_main .photoManagement_oneImage.masonry-brick.loaded{
+
+    opacity: 1;
+}
+
+
+
+
+
+#presentandshare_main .time_location{
+
+    font-size: 0.9em;
+    font-weight: 400;
+    color: grey;
+    line-height: 1em;
+    margin-top: 3%;
+    margin-left: -1.5px;
+}
+
+#presentandshare_main time_location .location{}
+
+#presentandshare_main .time_location div{
+
+    display: inline-block;
+}
+
+#presentandshare_main .time_location i.tiny.icon, i.tiny.icons{
+
+    line-height: 1;
+    font-size: .85714286rem;
+    margin-right: 0;
+}
+
+#presentandshare_main .photoManagement_oneImage.masonry-brick.loaded{
+
+    opacity: 1;
+}
+
+
+#presentandshare_main .photoManagement_oneImage .userName_userAvatar{
+
+    width: auto;
+    z-index: 1;
+    position: relative;
+    padding: 1em 0 1em 1em;
+
+}
+
+#presentandshare_main .one_tag .ui.basic.label{
+
+    font-weight: bolder ;
+}
+
+#presentandshare_main .photoManagement_oneImage .userAvatar{
+
+    width: 12%;
+    border-radius: 50%;
+    overflow: hidden;
+    display: inline-block;
+    vertical-align: top;
+}
+
+#presentandshare_main .photoManagement_oneImage .userName_source{
+
+    display: inline-block;
+    padding: 0.2em 0.5em;
+    vertical-align: top;
+    width: 85%;
+    text-align: left !important;
+}
+
+#presentandshare_main .photoManagement_oneImage .userName_source .userName{
+
+    font-size: 1.05em;
+    font-weight: 600;
+}
+
+#presentandshare_main .photoManagement_oneImage .userName_source .source{
+
+    font-size: 0.9em;
+    font-weight: 400;
+    color: grey;
+    line-height: 0.9em;
+}
+
+#presentandshare_main #basiclayout_main #photoManagement_imageList .photo_info{
+
+    padding: 5%;
+    background: #fff;
+    word-break: break-all;
+    color: #636262;
+}
+
+
+#presentandshare_main #photoManagement_imageList .photo_info .caption{
+
+    font-size: 1.1em;
+    font-weight: 600;
+    color: #4E4D4D;
+}
+
+#presentandshare_main #photoManagement_imageList .photo_info .ui.basic.label{
+
+    color: grey;
+    font-weight: 500 !important;
+    border-color: grey;
+    border-radius: 0px;
+}
+
+#presentandshare_main #photoManagement_imageList .tag_list{
+
+    padding: 0;
+    margin-top: 0.5em;
+}
+
+#presentandshare_main .one_tag{
+
+    display: inline-block;
+    list-style:none;
+    margin-right: 2px;
+    margin-top: 3px;
+    cursor: pointer;
+}
+
+#presentandshare_main #photoManagement_imageList .photoContainer{
+
+    position: relative;
+}
+
+#presentandshare_main #photoManagement_imageList .photoContainer .play_sym{
+
+    position: absolute;
+    top: 50%;
+    color: rgba(255, 255, 255, 0.92);
+    font-size: 5em;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    line-height: 1em;
+}
+
+
+#presentandshare_main loadinganimation{
+
+    margin-bottom: 5%;
+}
+
+#presentandshare_main #photoManagement_imageList .photo_info .info{
+
+    font-size: 0.8em;
+    font-weight: 600;
+}
+
+
+@media only screen and (max-width: 700px) {
+
+    #presentandshare_main .photoManagement_oneImage{
+
+        width: 49%;
+        margin-left: 0.8%;
+    }
+
+
+    #presentandshare_main #image_search_main{
+
+        width: 100vw;
+        overflow-x: hidden;
+
+    }
+
+    #presentandshare_main #image_search_main #image_search_list{
+
+        padding: 0;
+    }
+
+
+    /*.photoManagement_oneImage{*/
+
+    /*width: 100%;*/
+    /*margin-left: 0%;*/
+    /*margin-top: 5px;*/
+    /*}*/
+    #presentandshare_main #image_search_main #photoManagement_imageList .label{
+
+        display: none;
+    }
+    #presentandshare_main #image_search_main #photoManagement_imageList .photo_caption{
+
+        display: none;
+    }
+
+    #presentandshare_main #image_search_main #photoManagement_imageList .image_time_location{
+
+        display: none;
+    }
+
+    #presentandshare_main #image_search_main #photoManagement_imageList .userAvatar{
+
+        display: none;
+    }
+
+    #presentandshare_main #image_search_main .photo_info{
+
+        display: none;
+    }
+
+    #presentandshare_main #image_search_left{
+
+        width: 100%;
+    }
+
+    #presentandshare_main #image_search_main #static_searchhanger{
+
+        margin-top: 10px;
+        width: 75%;
+    }
+
+    #presentandshare_main  #image_search_title{
+
+
+        /*font-size: 35px;*/
+        /*padding: 10px;*/
+    }
+}
+
+@media only screen and (max-width: 1250px) {
+
+    #presentandshare_main #basiclayout_main .photoManagement_oneImage{
+
+        width: 24% !important;
+        margin-left: 0.8% !important;
+    }
+
+}
+@media only screen and (max-width: 950px) {
+
+
+    #presentandshare_main #basiclayout_main .photoManagement_oneImage{
+
+        width: 32% !important;
+        margin-left: 0.8% !important;
+    }
+}
+
+@media only screen and (max-width: 800px) {
+
+    #presentandshare_main #basiclayout_main .photoManagement_oneImage{
+
+        width: 49% !important;
+        margin-left: 0.8% !important;
+    }
+
+}
+@media only screen and (max-width: 700px) {
+
+    #presentandshare_main #basiclayout_main  .photoManagement_oneImage{
+
+        margin-top: 0 !important;
+        margin-bottom: 0 !important;
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+        width: 100% !important;
+        border: 0;
+        border-top: 1px solid gainsboro;
+    }
+}
+

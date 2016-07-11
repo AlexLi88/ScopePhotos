@@ -1,0 +1,9 @@
+<div id="presentandshare_main">
+    <!--<div id="embed_t">Live Photo Streaming, Powered by <a target="_blank" href="http://www.scopephotos.com" ng-style="{'background-image':'url('+ pasCtr.scopeLogo +')'}"></a></div>-->
+    <div id="scope_title" ng-class="{dark:theme=='dark'}">
+        <div class="sub header" ng-bind="curScope.caption | limitTo: 40"></div>
+    </div>
+    <div id="error_info" ng-show="error">{{pasCtr.errInfo}}</div>
+    <searchhanger></searchhanger>
+    <div ui-view id="view" ng-class="{dark:theme=='dark'}"></div>
+</div>

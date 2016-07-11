@@ -1,0 +1,19 @@
+<div id="phone_init_page_main" ng-show="phoneCtr.phoneUser">
+
+    <div id="title">
+        SCOPE MEDIA
+    </div>
+
+    <div id="close_button" ng-click="hidePhoneInit()"><i class="fa fa-fw fa-times"></i></div>
+    <!--<div id="web_logo">-->
+        <!--<img ng-src="{{logoSrc}}">-->
+    <!--</div>-->
+    <div id="phono_init_page_left">
+    <div id="content">
+        Refine Photo Streaming
+    </div>
+        <div id="download_link"><a ng-href="{{phoneCtr.phoneType == 'iPhone' && 'https://itunes.apple.com/app/id911111086'  || 'https://play.google.com/store/apps/details?id=com.scopemedia.android' }}">Tap to get Scope</a></div>
+        <div id="screen_shot"><img ng-src="{{landingSrc}}"></div>
+    </div>
+
+</div>

@@ -1,0 +1,30 @@
+<div id="basiclayout_main">
+    <popup></popup>
+    <div id="image_search_list" ng-class="{'container': viewMode=='Compact','container-fluid': viewMode=='Presentation'}">
+        <ul id="photoManagement_imageList" masonry="{ transitionDuration: '0s' }" reload-on-resize preserve-order>
+            <li class="photoManagement_oneImage masonry-brick" ng-repeat="image in imageArr | orderBy:'-shotTime' "  ng-click="showDetailImage(image)">
+                <div class="userName_userAvatar" ng-show="viewFormate!='imageOnly' && viewFormate!='imageLarge'">
+                    <!--<div class="ui blue right ribbon label" ng-show="image.sourceType != 'PX' && image.sourceType != 'SM'"><i class="icon white" ng-class="determineOriginalIcon(image)"></i></div>-->
+                    <div class="userAvatar"><a ng-attr-href = "{{determineOriginal(image)}}" target="_blank"><img ng-src="{{image.sourceOwner? image.sourceOwner.profile_picture: image.owner.avatar}}"></a></div>
+                    <div class="userName_source">
+                        <div class="userName">{{image.sourceOwner.username?image.sourceOwner.username:image.owner.name}}</div>
+                        <div class="source">{{'@ ' + determineOriginalText(image)}}</div>
+                        <div class="time_location">
+                            <div class="location"><i class="icon tiny marker"></i>{{image.location.address}}</div>
+                            <div class="image_time" style="margin-left: 0.35em;"><i class=""></i>{{getShotTime(image.uploadTime)}}</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- <div ng-attr-class="{{ image.selected && 'selected_border show' || 'selected_border'}}"></div> -->
+                <div class="photoContainer" ng-click="showDetailImage(image,image.id)" ng-mouseover="showRibbon($event)" ng-mouseleave="hideRibbon($event)"><img ng-src="{{image.mediaType == 'IMAGE' && image.retina.url || image.thumbnail.fileName}}">
+                </div>
+
+            </li>
+        </ul>
+        <loadinganimation ng-show="updating"></loadinganimation>
+    </div>
+
+    <div ui-view></div>
+
+</div>

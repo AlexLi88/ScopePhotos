@@ -1,0 +1,259 @@
+#aboutus_main{
+
+  #upper_hero{
+
+    width: 100%;
+    height: 70vh;
+    background: #e1e1e1;
+  }
+
+  #main_bg {
+
+    //margin-top: -65vh;
+    padding-bottom: 2%;
+    @media(max-width: 1000px){
+
+      padding-bottom: 10%;
+
+    }
+    @media(max-width: 780px){
+
+      padding-bottom: 5%;
+      //margin-top: -65vh;
+
+    }
+
+    #intro {
+
+      width: 100%;
+      padding: 1em 2em;
+      text-align: center;
+      margin: auto;
+      font-size: 1.7em;
+      line-height: 1.3em;
+      color: white;
+      background: rgba(82, 82, 82, 0.68);
+      font-style: italic;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+
+      @media(max-width: 1000px){
+
+        position: inherit;
+        transform: none;
+      }
+
+      @media(max-width: 700px){
+
+        padding: 0.5em;
+        font-size: 2.5vh;
+
+      }
+    }
+
+    #bg{
+
+      text-align: center;
+      img{
+
+        width: 100%;
+        display: inline-block;
+        //margin-top: 5vh;
+        //box-shadow: 3px 5px 5px #C3C2C2;
+
+
+
+
+
+        @media(max-width: 770px) {
+
+          width: 100%;
+
+        }
+
+      }
+    }
+
+
+  }
+
+  #middle{
+
+    white-space: nowrap;
+
+    #left,#right{
+
+      display: inline-block;
+      width: 50%;
+      padding: 2em;
+
+      @media(max-width: 780px){
+
+        width:100%;
+        display: block;
+        padding: 1em;
+
+      }
+    }
+
+    #left img{
+
+      width:100%;
+    }
+
+    #right{
+
+      color: black;
+      vertical-align: middle;
+    }
+
+
+    #right{
+
+      #title{
+
+        font-size: 2.5em;
+        font-weight: bold;
+        line-height: 1em;
+      }
+
+      #content{
+
+        padding: 2em 0em;
+        white-space: pre-line;
+        text-align: left;
+        font-size: 1.2em;
+        line-height: 1.4em;
+        padding-top: 1.2em;
+      }
+    }
+
+
+  }
+
+  #bottom{
+
+    text-align: center;
+    @media(max-width: 780px){
+
+      margin-top:5%;
+    }
+    #upper_img{
+
+      img{
+
+        width: 100%;
+        max-width: 600px;
+      }
+
+    }
+
+    #title{
+
+      font-size: 2.5em;
+      font-weight: bold;
+      line-height: 1em;
+      margin-top: -1em;
+    }
+
+    #content{
+
+      padding: 2em 0em;
+      white-space: pre-line;
+      font-size: 1.2em;
+      line-height: 1.4em;
+      max-width: 600px;
+      margin: auto;
+    }
+  }
+
+  #job_listing{
+
+    padding: 1em;
+
+    .one_listing{
+
+      padding: 1em;
+      max-width: 1000px;
+      margin: auto;
+      background: #fafafa;
+      margin-bottom: 1.5em;
+
+      .left{
+        display: inline-block;
+
+
+        @media(max-width: 550px) {
+
+          width: 100%;
+
+        }
+
+
+        .job_title{
+
+          font-size: 1.3em;
+          font-weight: 100;
+        }
+
+        .job_loc{
+
+          padding: 0.5em 0;
+          img{
+
+            width: 20px;
+          }
+          span{
+
+            padding-left: 0.5em;
+            font-size: 1.1em;
+            padding-top: 0.1em;
+            vertical-align: middle;
+            color:grey;
+
+          }
+        }
+
+
+      }
+
+      .right{
+
+        display: inline;
+        float: right;
+        padding-top: .8em;
+        @media(max-width: 550px) {
+
+          width: 100%;
+          display: inline-block;
+          text-align: right;
+          float: inherit;
+          margin-bottom: 3%;
+
+        }
+      }
+
+      .bottom_drop{
+
+        height: auto;
+        padding: 1em;
+        display: none;
+      }
+    }
+
+    #bottom{
+
+      font-size: 1.2em;
+      line-height: 1.4em;
+      padding: 2em 0em;
+      a{
+        color:#fa3535;
+      }
+    }
+  }
+
+
+
+}

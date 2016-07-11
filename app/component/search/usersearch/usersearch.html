@@ -1,0 +1,37 @@
+<div id="usersearch_main">
+
+
+    <div id="user_search_title">
+        <searchhanger></searchhanger>
+        <!--<div ng-bind="'#' + imageCtr.searchContent"></div>-->
+    </div>
+    <errormessage ng-show="userCtr.showErrorMessage" errorType="nouser"></errormessage>
+
+    <div id="user_list" class="container">
+
+        <!--<div class="ui card one_user" ng-repeat=" user in userCtr.userArr">-->
+            <!--<a class="image" ng-href="{{'#/user/' + user.id }}">-->
+                <!--<img ng-src="{{user.avatar}}">-->
+            <!--</a>-->
+            <!--<div class="content">-->
+                <!--<div class="header" ng-bind="user.name"></div>-->
+                <!--&lt;!&ndash;<div class="meta">&ndash;&gt;-->
+                    <!--&lt;!&ndash;<a>Last Seen 2 days ago</a>&ndash;&gt;-->
+                <!--&lt;!&ndash;</div>&ndash;&gt;-->
+            <!--</div>-->
+        <!--</div>-->
+
+
+        <div class="ui middle aligned selection list" ng-repeat=" user in userCtr.userArr">
+            <a class="image" ng-href="{{'#/user/' + user.id + '/photo' }}"><div class="item">
+                <img class="ui avatar image" ng-src="{{user.avatar}}">
+                <div class="content">
+                    <div class="header" ng-bind="user.name"></div>
+                </div>
+            </div></a>
+            <!--<div class="ui divider"></div>-->
+        </div>
+
+    </div>
+    <loadinganimation ng-show="updating"></loadinganimation>
+</div>

@@ -1,0 +1,41 @@
+<div id="paymenitemlist_main">
+
+
+    <div id="product_list">
+        <div id="subscription">
+        <div class="one_p">
+            <div class="purchase">
+                <button class="ui large basic red button" ng-click="subscribeItem(item)">subscribe</button>
+            </div>
+        </div>
+        <div class="one_p"></div>
+        <div class="one_p"></div>
+
+        </div>
+
+
+        <div class="ui horizontal divider">
+            Or
+        </div>
+
+        <div id="invoice">
+
+            <div id="invoice_title">Enter Invoice Number</div>
+            <div id="invoice_input" class="ui input">
+                <input ng-model="skuNum">
+                <button id="retrive_but" ng-click="payInvoiceItem({sku:skuNum,type:'invoice'})" class="ui button tiny basic">Retrive</button>
+
+            </div>
+
+
+        </div>
+
+
+
+
+    </div>
+
+
+
+
+</div>

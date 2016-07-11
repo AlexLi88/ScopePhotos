@@ -1,0 +1,286 @@
+#scope_search_title{
+
+    width: 100%;
+    position: relative;
+
+}
+
+
+#scope_search_main #static_searchhanger{
+
+    display: none;
+}
+
+
+#scope_search_left{
+
+    width:100%;
+    display: inline-block;
+
+}
+
+#scope_search_right{
+
+    display: inline-block;
+    width: 25%;
+    padding-left: 5%;
+    vertical-align: top;
+}
+
+#scope_search_main #scope_list{
+
+    padding:0;
+    margin-top: 10px;
+}
+
+#scope_search_main .one_scope{
+
+    display: inline-block;
+    width: 23%;
+    margin-left: 1.2% !important;
+    margin-top: 1% !important;
+    margin-bottom: 0px !important;
+    min-height: 100px;
+    list-style: none;
+    height: auto;
+    overflow: hidden;
+    position: relative;
+    opacity: 0;
+    transition:opacity linear 1s;
+    vertical-align: top;
+    border-radius: 0;
+    box-shadow: 1px 1px 1px #EAE8E8;
+}
+
+#scope_search_main .one_scope .scope_info_section{
+
+    height: 70px;
+    width: 100%;
+    position: absolute;
+    bottom: -25px;
+    background: white;
+}
+
+#scope_search_main .one_scope .scope_info_section .scope_stats{
+
+
+    position: absolute;
+    right: 5%;
+    color: black;
+    bottom: 5px;
+}
+
+#scope_search_main .one_scope #cover_image{
+
+    height: auto;
+    background: white;
+    overflow: hidden;
+    cursor: pointer;
+    min-height: 150px;
+}
+
+/*#scope_search_main #cover_image:hover{
+
+   transform:translateY(-20px);
+
+}
+*/
+
+#scope_search_main .one_scope #cover_image img{
+
+    width: 100%;
+    height: auto;
+    position: relative;
+}
+
+#scope_search_main .ui.basic.label{
+
+    float: right;
+    border: none;
+}
+
+#scope_search_main .one_scope.loaded{
+    opacity: 1;
+}
+
+#scope_search_main .one_scope .scope_title{
+
+    padding: 10px;
+    color: black;
+    font-size: 13px;
+}
+
+
+#scope_search_main .userName_userAvatar{
+
+    position: absolute;
+    width: auto;
+    top: -5px;
+    left: -5px;
+    text-align: right;
+    z-index: 1;
+
+}
+
+#scope_search_main .userName_userAvatar .userName,.userAvatar{
+
+    display: inline-block;
+    font-size: 14px;
+}
+
+#scope_search_main .userName_userAvatar  .userName{
+
+    width: auto;
+    margin-right: 5px;
+}
+
+#scope_search_main .userName_userAvatar  .userAvatar{
+
+    width: 2.5em;
+    border-radius: 5px;
+    overflow: hidden;
+    display: inline-block;
+    vertical-align: bottom;
+    border: 2px solid #F3F3F3;
+    cursor:break-word;
+}
+
+
+#scope_search_main .userName_userAvatar  .userAvatar img{
+
+    width: 100%;
+    height: auto;
+}
+
+
+/*#scope_search_main .one_scope img{*/
+
+    /*width:100%;*/
+    /*height:auto;*/
+/*}*/
+
+/*#scope_search_main  .ui.card>.image, .ui.cards>.card>.image{*/
+
+    /*cursor: pointer;*/
+/*}*/
+
+
+
+.scope_owner_avatar{
+
+    width: 2.5em;
+    border-radius: 5px;
+    overflow: hidden;
+    display: inline-block;
+    vertical-align: bottom;
+    border: 2px solid #F3F3F3;
+    cursor: pointer;
+}
+
+.scope_owner{
+
+    position: absolute;
+    width: auto;
+    top: -5px;
+    left: -5px;
+    text-align: right;
+    z-index: 1;
+
+}
+
+#scope_search_main .scope_background{
+
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: #928A8A;
+    opacity: 0.5;
+    transition: opacity linear 0.5s;
+}
+
+#scope_search_main .scope_background.hovered{
+
+    opacity: 0;
+}
+
+#scope_search_main .scope_info{
+
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    font-weight: 400;
+    left: 0;
+    font-size: 17px;
+    color: white;
+    margin: auto;
+    width: 100%;
+    font-family: Work Sans;
+    text-shadow: 1px 1px #272626;
+    text-align: center;
+    height: 25px;
+}
+
+
+@media only screen and (max-width: 1200px) {
+
+    #scope_search_main .one_scope{
+
+        width: 32%;
+        margin-left: 1% !important;
+    }
+
+}
+
+@media only screen and (max-width: 850px) {
+
+    #scope_search_main .one_scope{
+
+        width: 49%;
+        margin-left: 1% !important;
+    }
+
+    #scope_search_main #scope_search_title{
+
+        width:100%;
+    }
+}
+
+@media only screen and (max-width: 700px) {
+
+    /*.photoManagement_oneImage{*/
+
+        /*width: 100%;*/
+        /*margin-left: 0%;*/
+        /*margin-top: 5px;*/
+    /*}*/
+
+    #scope_search_main #static_searchhanger{
+
+        display: inherit;
+    }
+
+    #scope_search_right{
+        display: none;
+
+    }
+    #scope_search_left{
+
+        width: 100%;
+    }
+
+
+    /*#scope_search_main #searchHanger_hanger{*/
+
+        /*margin-top: 10px;*/
+        /*width: 75%;*/
+    /*}*/
+
+    #scope_search_main #scope_search_title{
+
+        /*padding: 10px;*/
+    }
+}

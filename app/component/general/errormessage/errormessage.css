@@ -1,0 +1,29 @@
+#errormessage_main{
+
+
+    text-align: -webkit-center;
+    text-align: -moz-center;
+    margin-top: 50px;
+    padding: 4%;
+}
+
+#errormessage_main .content{
+
+    color:#CAC8C8 !important;
+    display: inline-block !important;
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+#errormessage_main .icon{
+
+    color:#CAC8C8 !important;
+    display:inline-block !important;
+
+}
+
+
+#errormessage_main #download_our_app a{
+
+    cursor: pointer;
+}

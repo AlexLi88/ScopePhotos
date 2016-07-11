@@ -1,0 +1,41 @@
+<div id="presentandembed_main">
+    <div id="embed_t">Live Photo Streaming, Powered by <a target="_blank" href="http://www.scopephotos.com" ng-style="{'background-image':'url('+ pasCtr.scopeLogo +')'}"></a></div>
+    <div id="scope_title" ng-class="{dark:pasCtr.theme=='dark'}">
+        <div id="scopeLogo"></div><div class="sub header" ng-bind="pasCtr.curScope.caption | limitTo: 40"></div>
+        <div id="display_option_menu" ng-show="pasCtr.mode == 'presentation'">
+            <div id="display_option" ng-click="showMenu()" class="floating"><i class="icon list layout"></i>Menu<i id="icon circle"></i></div>
+            <div id="display_menu">
+
+                <div class="menu_i live" ng-click="liveMode()" ng-class="{enabled:pasCtr.liveModeEnable == true }">
+                    Live
+                </div>
+
+                <div class="menu_i">
+                    Layout
+                    <div id="layout_menu">
+                        <div ng-click="switchLayout('layout_basic')" ng-class="{selected:pasCtr.currentLayout == 'presentandembed.layout_basic'  }">Basic</div>
+                        <div ng-click="switchLayout('float_5')" ng-class="{selected:pasCtr.currentLayout == 'presentandembed.float_5'  }">Float/5</div>
+                        <div ng-click="switchLayout('float_3')" ng-class="{selected:pasCtr.currentLayout == 'presentandembed.float_3'  }">Float/3</div>
+                        <div ng-click="switchLayout('single_image')" ng-class="{selected:pasCtr.currentLayout == 'presentandembed.single_image'  }">Single Image</div>
+                        <div ng-click="switchLayout('compact')" ng-class="{selected:pasCtr.currentLayout == 'presentandembed.compact'  }">Compact</div>
+                    </div>
+                </div>
+
+                <!--<div class="menu_i">-->
+                    <!--View-->
+                    <!--<div id="view_menu">-->
+                        <!--<div ng-class="{selected:pasCtr.viewMode == 'smallWithText'  }" class="view_option" ng-click="imageAndText()">Small With Text</div>-->
+                        <!--<div ng-class="{selected:pasCtr.viewMode == 'smallWithoutText'  }" class="view_option" ng-click="smallWithoutText()">Small Without Text</div>-->
+                        <!--<div ng-class="{selected:pasCtr.viewMode == 'largeWithText'  }" class="view_option" ng-click="largeImage()">Huge</div>-->
+                    <!--</div>-->
+                <!--</div>-->
+
+
+            </div>
+        </div>
+
+    </div>
+
+    <div id="error_info" ng-show="pasCtr.error">{{pasCtr.errInfo}}</div>
+    <div ui-view ng-class="{dark:pasCtr.theme=='dark'}"></div>
+</div>

@@ -1,0 +1,327 @@
+#btob_main{
+
+    margin-top: -60px;
+    font-family: "Source Sans Pro";
+    display: none;
+}
+
+#btob_main #top_container{
+
+    height: 70vh;
+    width: 100vw;
+    background-size: cover !important;
+    background-position: 50% !important;
+}
+
+#top_container #container{
+
+    height: 100%;
+    display: inline-block;
+    width: 30%;
+    margin-left: 15%;
+    text-align: left;
+    padding-top: 15%;
+}
+
+#top_container #container #title{
+
+    font-size: 5em;
+    color: white;
+    font-weight: 600;
+    line-height: 1em;
+}
+
+#top_container #container #content{
+
+    padding: 5%;
+    font-size: 1.6em;
+    line-height: 1em;
+    text-align: left;
+    color: white;
+    font-weight: 100;
+    padding-left: 0;
+    line-height: 1.5em;
+}
+
+#btob_main #middle_container{
+
+    padding: 2em;
+}
+
+#btob_main #middle_container #middle_title{
+
+    text-align: center;
+    padding: 0.5em;
+    font-size: 3.5em;
+    font-weight: 200;
+    position: relative;
+}
+
+#btob_main #middle_container #middle_title:after{
+
+    content: '';
+    width: 20%;
+    height: 3%;
+    background: #fa3535;
+    bottom: 0;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+
+}
+
+#btob_main #middle_container #middle_content{
+
+    padding: 1.5em 10em;
+    text-align: center;
+    font-size: 1.2em;
+    line-height: 1.5em;
+    font-weight: 400;
+    margin-bottom: 3%;
+}
+
+#btob_main #divider{
+
+    padding: .5em;
+    position: relative;
+    margin: 3% 0%;
+
+}
+
+#btob_main #divider_header{
+
+    left: 50%;
+    padding: .2em 1em;
+    background: white;
+    color: black;
+    font-size: 6em;
+    font-weight: 500;
+    letter-spacing: -0.005em;
+    text-align: center;
+}
+
+/*#top_benefits{*/
+
+    /*margin-top: 5%;*/
+/*}*/
+
+.one_benefit{
+
+    display: inline-block;
+    width:33.333%;
+    /*margin-left: 2%;*/
+    text-align: center;
+    vertical-align: top;
+}
+
+#msg{
+
+    font-size: 1.2em;
+    color: #FFCECE;
+    display: inline-block;
+    width: 70%;
+
+}
+
+.logo_content{
+
+    width: 10em;
+    height: 8em;
+    background-size: contain !important;
+    background-position: 50% !important;
+    display: inline-block;
+    background-repeat: no-repeat !important;
+}
+
+#top_benefits .benefit_container{
+
+    margin-top: 3%;
+    text-align: center;
+}
+
+#bottom_benefits .benefit_container{
+
+    margin-top: 3%;
+    text-align: center;
+}
+
+.one_benefit .content{
+
+    font-size: 1.3em;
+    font-weight: 500;
+    padding: 0 4em;
+}
+
+#bottom_container{
+
+    width: 100%;
+    height: auto;
+    background-size: cover !important;
+    margin-top: 3%;
+}
+
+#partner_container{
+
+    display: inline-block;
+    height: 100%;
+    width: 50%;
+    margin-left: 40%;
+    padding: 3em;
+    color: white;
+}
+
+#partner_container #success_info{
+
+    padding: 0.5em;
+    font-weight: 300;
+    font-size: 1.2em;
+}
+
+#partner_container #form_title{
+
+    font-size: 2.5em;
+    line-height: 1em;
+    margin-bottom: 5%;
+}
+
+#partner_container #submit_button{
+
+    display: inline-block;
+    vertical-align: top;
+    width: 29%;
+}
+
+#partner_container #submit_button button{
+
+    padding: 0.5em 3em;
+    border: 1px solid #382b32;
+    font-size: 1.3em;
+    font-weight: 600;
+    border-radius: 5px;
+    background: #382b32;
+    color: white;
+    text-transform: uppercase;
+ }
+
+#partner_container #submit_button button:focus{
+
+    outline-width: 0px;
+}
+
+#btob_main .form_content{
+
+    display: inline-block;
+    width: 50%;
+    padding: 1em;
+    padding-left: -0;
+}
+
+#btob_main .form_content .form_title{
+
+    font-size: 0.8em;
+    font-weight: 100;
+}
+
+#btob_main .form_content input,textarea{
+
+    line-height: normal;
+    display: inline-block;
+    width: 100%;
+    background: white;
+    border: 1px solid;
+    padding: 0.5em;
+    border-radius: 5px;
+    margin-top: 1%;
+    color: black;
+    border: transparent;
+}
+
+#btob_main .form_content input:focus,textarea:focus{
+
+    outline-width: 0px;
+}
+
+#btob_main .form_content.nob{
+
+    width:100%;
+
+}
+
+#btob_main .form_content textarea{
+
+    resize: none;
+    height: 20vh;
+}
+
+
+@media only screen and (max-width: 800px){
+
+    #btob_main{
+
+        font-size: 0.8em;
+    }
+
+    #btob_main #top_container{
+
+        height: 50vh;
+    }
+
+    #top_container #container{
+
+        width: 50%;
+    }
+
+    #btob_main #middle_container #middle_content{
+
+        padding: 1.5em 3em;
+    }
+    .one_benefit .content{
+
+        padding: 0 2em;
+    }
+
+    #partner_container{
+
+        width: 70%;
+        margin-left: 30%;
+    }
+
+    #btob_main .form_content .form_title{
+
+        font-weight: bold;
+        font-size: 1.0em;
+    }
+
+}
+
+@media only screen and (max-width: 700px){
+
+
+    #btob_main{
+
+        font-size: 0.5em;
+    }
+
+    #top_container #container{
+
+        width: 80%;
+        padding-top: 40%;
+    }
+    #btob_main #middle_container #middle_content{
+
+        padding: 1.5em 1em;
+        font-weight: 600;
+    }
+
+    .one_benefit .content{
+
+        padding: 0;
+    }
+
+    #partner_container{
+
+        width:100%;
+        margin: 0;
+    }
+}
+

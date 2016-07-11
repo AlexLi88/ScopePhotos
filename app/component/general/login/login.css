@@ -1,0 +1,183 @@
+#log_in_directive_div{
+
+    background-color: #333333;
+    min-height: 100vh;
+    font-family: "Source Sans Pro";
+    margin-top: -60px;
+    background-size: contain !important;
+
+}
+
+#log_in_directive_div input:focus{
+
+    outline-width: 0px;
+}
+
+#log_in_directive_div input:active{
+
+    outline-width: 0px;
+}
+
+#content{
+
+    text-align: center;
+    padding: 10%;
+    padding-bottom: 0%;
+}
+
+#switch .tab{
+
+    display: inline-block;
+    color: white;
+    border-color: #ff5757;
+    font-size: 2em;
+    font-weight: 400;
+    padding: 0.5em;
+    line-height: 1em;
+    margin-left: 1em;
+    transition: .2s ease;
+    cursor: pointer;
+
+}
+
+#switch .tab:hover{
+
+    border-bottom: 3px solid #ff5757;
+}
+
+#switch .select{
+
+    border-bottom: 3px solid #ff5757;
+}
+
+#login,#register{
+
+    display: inline-block;
+    width: 60%;
+    margin-left: 2.5%;
+    min-height: 50vh;
+    border-radius: 10px;
+    position: relative;
+    vertical-align: top;
+    padding: 5%;
+    text-align: left;
+    margin-top: 2%;
+    padding-top: 0;
+    display: none;
+}
+
+#form_t{
+
+    font-size: 2em;
+    text-transform: uppercase;
+    color: #979797;
+    position: absolute;
+    width: auto;
+    top: -5%;
+    font-weight: 700;
+    padding: 0.5em;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #333333;
+}
+
+
+.field{
+
+    padding: 0.5em;
+}
+.field #t
+    {
+
+    font-size: .95em;
+    color: #979797;
+    font-weight: 600;
+    line-height: 1em;
+    text-transform: uppercase;
+
+}
+
+#login a{
+
+    padding: 0.5em;
+    text-decoration: underline;
+    color: white;
+    font-size: 1em;
+    display: inline-block;
+
+}
+
+#tou{
+
+    margin-top: 3%;
+    color: white;
+    font-weight: 400;
+    text-align: center;
+}
+#tou a{
+
+    color: white;
+    text-decoration: underline;
+}
+
+#form_control button{
+
+    display: inline-block;
+    width: 100%;
+    padding: .7em 0.5em;
+    margin-top: 5%;
+    font-size: 1.5em;
+    font-weight: 400;
+    background: #ff5757;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+
+
+.field #c input{
+
+    width: 100%;
+    border: 1px solid #979797;
+    line-height: 2.5em;
+    margin-top: 2%;
+    border-radius: 5px;
+    color: white;
+    background: transparent;
+    padding: 0 0.5em;
+}
+
+
+@media only screen and (max-width: 800px){
+
+    #login, #register{
+
+        padding: 0;
+        width: 60%;
+    }
+
+}
+
+
+@media only screen and (max-width: 700px){
+
+    #content{
+
+        padding: 0;
+        padding-top: 60px;
+    }
+    #switch .tab{
+
+        font-size: 1.5em;
+    }
+
+    #login, #register{
+
+        width:90%;
+    }
+}
+
+

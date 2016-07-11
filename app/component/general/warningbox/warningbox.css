@@ -1,0 +1,39 @@
+#warningbox_main{
+
+    display: none;
+    position: absolute;
+    margin-top: 0 !important;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    margin: auto !important;
+    height: 250px;
+    width: 500px;
+}
+
+#warningbox_main .description{
+
+
+    padding: 5%;
+}
+
+
+#warningbox_main #close_button{
+
+    position: absolute;
+    top: 0;
+    right: 0;
+    cursor: pointer;
+}
+
+#warningbox_main #ios_download, #andriod_download{
+
+    width: auto;
+    display: inline-block;
+}
+
+#warningbox_main #delete_control{
+
+    text-align: right;
+}

@@ -1,0 +1,196 @@
+#userscopemanagement_main #userscopemanagement_left,#userscopemanagement_right{
+
+
+    display:inline-block;
+
+}
+
+
+
+#userscopemanagement_main .one_user_scope{
+
+    width: 24%;
+    margin-left: 1% !important;
+    margin-top: 1% !important;
+    margin-right: 0 !important;
+    display: inline-block;
+    border-radius: 0;
+    padding: 0px;
+    height: 20vw;
+    overflow: hidden;
+    vertical-align: top;
+
+}
+
+#userscopemanagement_main .edit_scope_button{
+
+    position: absolute;
+    left: 0;
+    z-index: 4;
+    padding: 1%;
+    color: black;
+    background: white;
+}
+
+#userscopemanagement_main .one_user_scope .scope_info{
+
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 100%;
+    cursor: pointer;
+}
+
+/*#userscopemanagement_main .one_user_scope:hover{
+
+
+    box-shadow: 3px 3px 2px grey;
+
+}*/
+
+#userscopemanagement_main .one_user_scope img{
+
+
+    height: auto;
+    overflow: hidden;
+    border-radius: 0px !important;
+    width: 100%;
+}
+
+
+#userscopemanagement_main .one_user_scope img:hover{
+
+    opacity: 0.7;
+}
+#userscopemanagement_main .blurring.dimmable.scope{
+
+    height: 100%;
+    overflow: hidden;
+    z-index: 3;
+
+}
+#userscopemanagement_main .scope_header{
+
+    padding: 2%;
+    margin-bottom: 0;
+    position: absolute;
+    z-index: 4;
+    width: 100%;
+    text-align: left;
+    margin: auto;
+    bottom: 10px;
+}
+
+#userscopemanagement_main .scope_header .scope_stats{
+
+    color: white;
+    position: absolute;
+    right: 5%;
+    font-size: 15px;
+    bottom: -40px;
+}
+
+#userscopemanagement_main .scope_header .scope_stats span{
+
+        display: inline-block;
+    margin-right: 10px;
+}
+#userscopemanagement_main .header_background{
+
+     width: 100%;
+    height: 100%;
+    position: absolute;
+    background: #000000;
+    z-index: 4;
+    opacity: 0.4;
+    top: 0;
+    left: 0;
+}
+
+#userscopemanagement_main .edit_button{
+
+    position: absolute;
+    top: 0;
+    z-index: 5;
+    right: 0;
+    padding: 5px;
+    background: white;
+    padding-right: 2px;
+    padding-top: 2px;
+    cursor: pointer;
+}
+
+#userscopemanagement_main .scope_header .header{
+
+    color: white;
+    position: relative;
+    font-weight: bolder;
+    font-size: 16px;
+    text-shadow: 1px 1px 1px black;
+}
+#userscopemanagement_main .edit_button{
+
+    position: absolute;
+}
+
+
+#userscopemanagement_main .blurring.dimmable.scope .content{
+
+
+    height: 60%
+}
+
+#userscopemanagement_main .blurring.dimmable.scope a{
+
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    background-position: 50% 10%;
+    background-size: cover;
+}
+
+
+
+#userscopemanagement_main #scope_control_buttons{
+
+    position: absolute;
+    z-index: 4;
+    bottom: 0;
+    right: 0;
+    width: auto;
+
+}
+
+#userscopemanagement_main #scope_control_buttons .button_top{
+
+
+    border-radius: 5px 0px 0px 0px;
+    padding: 10px;
+    background: #FAFAFA;
+    color: black;
+}
+
+#userscopemanagement_main #scope_control_buttons .button_top:hover{
+
+
+    background: gainsboro;
+}
+
+#userscopemanagement_main #scope_control_buttons .button_bottom{
+
+    border-radius: 0px;
+    padding: 10px;
+    color: #FAFAFA;
+    background: #D09696;
+}
+
+
+@media only screen and (max-width: 500px){
+
+    #userscopemanagement_main .one_user_scope{
+
+       width: 90%;
+        margin-left: 5%  !important;
+        height: 45vw;
+    }
+}

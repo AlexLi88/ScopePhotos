@@ -1,0 +1,14 @@
+#presentandembed_main #floatfive_main .photoManagement_oneImage{
+
+    opacity:1;
+    vertical-align: top;
+    width: 18.5%;
+    margin-left: 1.2%;
+    box-shadow: 8px 8px 10px rgba(0, 0, 0, 0.33);
+}
+
+
+#presentandembed_main #floatfive_main #photoManagement_imageList{
+
+    padding-top: 6% !important;
+}

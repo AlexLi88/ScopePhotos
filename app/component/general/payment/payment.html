@@ -1,0 +1,57 @@
+<div id="payment_main">
+
+
+<!--<div class="alert alert-warning" role="alert" ng-show="cartItems == null || cartItems.length == 0">-->
+    <!--Your cart is empty-->
+<!--</div>-->
+<!--<div>-->
+
+    <!--<form ng-submit="checkout()">-->
+        <!--<div class="form-group">-->
+            <!--<label for="point">-->
+                <!--<input id="point" type="radio" name="paymentMethod" ng-model="paymentMethod" value="Point">-->
+                <!--Point</label>-->
+            <!--<br />-->
+            <!--<label for="paypal">-->
+                <!--<input id="paypal" type="radio" name="paymentMethod" ng-model="paymentMethod" value="Paypal">-->
+                <!--Paypal</label><br/>-->
+        <!--</div>-->
+        <!--<div class="well">-->
+            <!--<p ng-show="paymentMethod == 'Point'">Use your points to pay!</p>-->
+            <!--<p ng-show="paymentMethod == 'Paypal'">You will be redirected to Paypal website</p>-->
+        <!--</div>-->
+
+        <!--<div class="clearfix">-->
+            <!--<button type="submit" class="btn btn-primary  pull-right" ng-show="cartItems != null && cartItems.length > 0">-->
+                <!--<span class="glyphicon glyphicon-usd"></span>&nbsp;<span translate="bigpotApp.shopping.checkout">Checkout</span>-->
+            <!--</button>-->
+        <!--</div>-->
+    <!--</form>-->
+
+    <!--<form action="{{ payPalSettings.paypal.service_url}}" method="post" target="_top"-->
+          <!--name="paypal-form" ng-show="false">-->
+        <!--<input type="hidden" name="cmd" value="_cart">-->
+        <!--<input type="hidden" name="upload" value="1">-->
+
+        <!--<input type="hidden" name="business" value="{{ payPalSettings.paypal.business }}">-->
+        <!--<input type="hidden" name="currency_code" value="{{ payPalSettings.paypal.currency_code }}" />-->
+        <!--<div ng-repeat="item in cartItems track by $index">-->
+            <!--<input type="hidden" name="item_name_{{$index + 1}}" value="{{item.getName()}}">-->
+            <!--<input type="hidden" name="item_number_{{$index + 1}}" value="{{item.getId()}}">-->
+            <!--<input type="hidden" name="quantity_{{$index + 1}}" value="{{item.getQuantity()}}">-->
+            <!--<input type="hidden" name="amount_{{$index + 1}}" value="{{item.getPrice()}}">-->
+        <!--</div>-->
+        <!--<input type="hidden" name="invoice" id="paypal-invoice" value="{{orderId}}">-->
+
+        <!--<input type="hidden" name="return" value="{{returnUrl}}">-->
+        <!--<input type="hidden" name="cancel_return" value="{{cancelReturnUrl}}">-->
+        <!--<input type="hidden" name="notify_url" value="{{notifyUrl}}">-->
+
+        <!--<input type="image" src="http://www.paypal.com/en_US/i/btn/x-click-but01.gif" name="submit" alt="Make payments with PayPal - it's fast, free and secure!">-->
+    <!--</form>-->
+
+
+    <ui-view></ui-view>
+
+<!--</div>-->
+</div>

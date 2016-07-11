@@ -1,0 +1,52 @@
+#termsofservicemain_div{
+
+    font-family: "Source Sans Pro";
+}
+
+
+#termsofservicemain_title{
+
+    text-align: center;
+    padding: 2%;
+    font-size: 30px;
+    font-weight: 400;
+}
+
+
+
+#termsofservicemain_content{
+
+    padding: 2%;
+    margin-top: 15px;
+}
+
+
+#termsofservicemain_content h3{
+
+    margin-top: 20px;
+}
+
+#termsofservicemain_content  h4{
+
+    margin-top: 20px;
+}
+
+
+@media only screen and (max-width: 700px){
+
+
+    #termsofservicemain_div{
+
+        padding: 5% 1%;
+    }
+
+    #termsofservicemain_title{
+
+        margin-bottom: 3vw;
+    }
+
+    #termsofservicemain_content{
+
+        padding: 3vw;
+    }
+}

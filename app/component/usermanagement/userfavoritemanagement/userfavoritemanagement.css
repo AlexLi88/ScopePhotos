@@ -1,0 +1,104 @@
+#userfavoritemanagement_main #userscopemanagement_left,#userscopemanagement_right{
+
+
+    display:inline-block;
+
+}
+
+
+
+#userfavoritemanagement_main .one_user_scope{
+
+    width: 24%;
+    margin-left: 1% !important;
+    margin-top: 1% !important;
+    margin-right: 0 !important;
+    display: inline-block;
+    border-radius: 0;
+    overflow: hidden;
+    padding: 0px;
+    height: 20vw;
+    overflow: hidden;
+    border: none;
+    box-shadow: 1px 1px 1px gainsboro;
+    transition: all 0.3s linear;
+
+}
+
+#userfavoritemanagement_main .one_user_scope:hover{
+
+
+    box-shadow: 3px 3px 2px grey;
+
+}
+
+#userfavoritemanagement_main .one_user_scope img{
+
+
+    height: auto;
+    overflow: hidden;
+    border-radius: 0px !important;
+    width: 100%;
+}
+
+
+#userfavoritemanagement_main .one_user_scope img:hover{
+
+    opacity: 0.7;
+}
+#userfavoritemanagement_main .blurring.dimmable.scope{
+
+    height: 100%;
+    overflow: hidden;
+    z-index: 3;
+
+}
+#userfavoritemanagement_main .scope_header{
+
+    padding: 3%;
+    margin-bottom: 0;
+    position: absolute;
+    z-index: 4;
+    width: 100%;
+    height: 50px;
+    top: 0;
+    text-align: center;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+}
+
+#userfavoritemanagement_main .header_background{
+
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background: #1b1c1d;
+    z-index: 4;
+    opacity: 0.2;
+    top:0;
+    left: 0;
+}
+
+#userfavoritemanagement_main .scope_header .header{
+
+    color: white;
+    position: relative;
+    font-weight: 100;
+    font-size: 16px;
+}
+#userfavoritemanagement_main .blurring.dimmable.scope .content{
+
+
+    height: 60%
+}
+
+#userfavoritemanagement_main .blurring.dimmable.scope a{
+
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    background-position: 50% 10%;
+    background-size: cover;
+}

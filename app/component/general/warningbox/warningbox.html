@@ -1,0 +1,83 @@
+<div id="warningbox_main" class="ui  basic modal">
+
+    <div id="close_button"><i ng-click="closeModal()" class="remove big icon"></i></div>
+
+
+    <div ng-show="boxCtr.type =='getOurApp'">
+    <div class="header">
+        Get Our App
+    </div>
+
+    <div class="description">
+
+        <div class="ui inverted header">
+            Download our application for the best experience of Scope.
+        </div>
+
+        <div id="web_download">
+        <div id="ios_download"><a href="https://itunes.apple.com/app/id911111086" target="_blank"><img class="ui small rounded image" ng-src="{{appStoreSrc}}"></a></div>
+        <div id="andriod_download"><a href="https://play.google.com/store/apps/details?id=com.scopemedia.android" target="_blank"><img class="ui small rounded image" ng-src="{{googlePlaySrc}}"></a></div>
+        </div>
+
+
+
+    </div></div>
+
+
+    <div ng-show="boxCtr.type =='deleteImage'">
+
+        <div class="description">
+
+            <div class="ui inverted header">
+                Do you wish to delete this image?
+            </div>
+
+            <div id="delete_control">
+
+                <button class="ui red button" ng-click="confirmDeleteImage()">Confirm</button>
+                <button class="ui button" ng-click="closeModal()">Cancel</button>
+
+
+            </div>
+
+
+
+        </div>
+
+    </div>
+
+    <div ng-show="boxCtr.type =='deleteScope'">
+
+        <div class="description">
+
+            <div class="ui inverted header">
+                Do you wish to delete this scope ( all image related to this scope will be deleted as well )?
+            </div>
+
+            <div id="delete_control">
+
+                <button class="ui red button" ng-click="confirmDeleteScope()">Confirm</button>
+                <button class="ui button" ng-click="closeModal()">Cancel</button>
+
+
+            </div>
+
+
+
+        </div>
+
+    </div>
+    <!--<div id="warning_box_bg"></div>-->
+
+    <!--<div id="get_out_app">-->
+
+        <!--Download our application for a best experience of Scope.-->
+
+        <!--<div id="web_download">-->
+                    <!--<div id="ios_download"><a href="https://itunes.apple.com/app/id911111086"><img ng-src="{{appStoreSrc}}"></a></div>-->
+                    <!--<div id="andriod_download"><a href="https://play.google.com/store/apps/details?id=com.scopemedia.android"><img ng-src="{{googlePlaySrc}}"></a></div>-->
+            <!--</div>-->
+
+    <!--</div>-->
+
+</div>

@@ -1,0 +1,86 @@
+<div class="ui segment" id="edit_pop_up">
+
+    <div id="image_edit" ng-show="popupCtr.editType=='image'">
+
+        <h5 class="ui horizontal brown divider header">
+            Caption
+        </h5>
+        <div class="ui small input edit_input">
+            <input type="text" ng-model="popupCtr.editImage.caption">
+        </div>
+        <h5 class="ui horizontal brown divider header">
+            Description
+        </h5>
+        <div class="ui small input edit_input">
+            <textarea type="text" ng-model="popupCtr.editImage.description"></textarea>
+        </div>
+        <h5 class="ui horizontal  brown divider header">
+            Tags
+        </h5>
+
+        <div class="edit_tags">
+
+            <div class="edit_tags_left">
+        <div class="ui label one_tag" ng-repeat="tag in popupCtr.editImage.tags">
+            {{tag.text}}
+            <i class="delete icon" ng-click="deleteTag(tag.text)"></i>
+        </div>
+            </div>
+            <div class="ui tiny vertical divider">
+                or
+            </div>
+
+            <div class="edit_tags_right">
+
+                    <h6 class="ui header tiny">Add A Tag</h6>
+                <div class="ui small icon input edit_input">
+                    <input type="text" ng-model="newTag">
+                    <i class="inverted circular red plus link icon" ng-click="addTag(newTag)"></i>
+                </div>
+            </div>
+
+        </div>
+
+
+    </div>
+
+    <div id="image_edit" ng-show="popupCtr.editType=='scope'">
+
+
+        <h5 class="ui horizontal brown divider header">
+            Caption
+        </h5>
+        <div class="ui small input edit_input">
+            <input type="text" ng-model="popupCtr.editScope.caption">
+        </div>
+        <h5 class="ui horizontal brown divider header">
+            Description
+        </h5>
+        <div class="ui small input edit_input">
+            <textarea type="text" ng-model="popupCtr.editScope.description"></textarea>
+        </div>
+
+        <h5 class="ui horizontal brown divider header">
+            Scope Tag
+        </h5>
+
+        <div class="edit_tags">
+            <div class="ui small input edit_input">
+                <input type="text" ng-model="popupCtr.editScope.tag">
+            </div>
+
+        </div>
+
+
+    </div>
+
+    <div id="edit_control">
+        <div class="ui buttons tiny">
+
+                <div class="ui button" ng-click="hideEditPopup()">Cancel</div>
+                <div class="ui button teal" ng-click="saveChange()">Save</div>
+
+        </div>
+    </div>
+
+</div>

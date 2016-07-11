@@ -1,0 +1,65 @@
+#phone_init_page_main{
+
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 5;
+    background: #fafafa;
+}
+
+#phone_init_page_main #title{
+
+
+    font-size: 22vw;
+    font-weight: bold;
+    line-height: 22vw;
+}
+
+
+
+#phone_init_page_main #content{
+
+    width: 100%;
+    display: inline-block;
+    font-size: 8vw;
+    color: grey;
+}
+
+#phone_init_page_main #screen_shot img{
+    width: 100%;
+
+}
+
+#phone_init_page_main #download_link{
+
+    padding: 15px;
+    text-align: center;
+}
+
+#phone_init_page_main #download_link a{
+
+
+    padding: 10px;
+    background: #F77C7C;
+    color: white;
+    font-size: 6vw;
+    box-shadow: 1px 1px 1px #949393;
+    display: block;
+    transition: 0.7s linear;
+}
+
+#phone_init_page_main #download_link a:focus,#phone_init_page_main #download_link a:active{
+
+    transform: scale(0.7);
+    background-color: #ff1a38;
+}
+
+#phone_init_page_main #close_button {
+
+    position: absolute;
+    font-size: 12vw;
+    right: -10px;
+    top: -10px;
+}

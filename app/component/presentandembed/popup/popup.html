@@ -1,0 +1,62 @@
+<div id="popup_main">
+
+    <div id="fix_bg" ng-click="closeDetailView()">
+
+        <div id="detail_image_container" ng-click="$event.stopPropagation()">
+
+
+            <div id="detail_image_container_right">
+
+                <div id="close_button" ng-click="closeDetailView()"><i class="ui icon close"></i></div>
+
+                <div id="user_info">
+                    <div id="user_avatar"><img ng-src="{{pupupCtr.image.sourceOwner.profile_picture?pupupCtr.image.sourceOwner.profile_picture:pupupCtr.image.owner.avatar}}"></div><!--
+            --><div id="user_info_left">
+                    <div id="user_name" >{{pupupCtr.image.sourceOwner.username?pupupCtr.image.sourceOwner.username:pupupCtr.image.owner.name}}</div>
+                    <div id="image_location" ng-show="pupupCtr.image.location != null">
+                        <div class="source">{{'@ ' + determineOriginalText(pupupCtr.image)}}</div>
+                        <div class="time_location">
+                            <a ng-href="{{'#/mapsearch?searchId=' + pupupCtr.image.id }}" class="location"><i class="icon tiny marker"></i>{{pupupCtr.image.location.address}}</a>
+                            <div class="image_time" style="margin-left: 0.35em;"><i class=""></i>{{getShotTime(pupupCtr.image.shotTime)}}</div>
+                        </div>
+
+                    </div>
+                </div>
+                </div>
+
+                <div class="ui divider"></div>
+                <div id="image_info">
+
+                    <div id="image_stats" ng-show="false">
+
+                        <div class="stat"><i  ng-style="{'background-image':'url('+ likeI +')'}" class="icon" ></i>{{ formateCount(pupupCtr.image.stats.likeCount) }}</div>
+                        <div class="stat"><i  ng-style="{'background-image':'url('+ viewI +')'}" class="icon"></i>{{formateCount(pupupCtr.image.stats.viewCount)}}</div>
+                        <div class="stat"><i  ng-style="{'background-image':'url('+ commentI +')'}" class="icon"></i>{{formateCount(pupupCtr.image.stats.commentCount)}}</div>
+
+                    </div>
+                    <div id="image_description" ng-bind="pupupCtr.image.description"></div>
+                    <div id="image_tags">
+                        <ul>
+                            <li ng-repeat="tag in pupupCtr.image.tags"><a class="ui tiny basic label" ng-href="{{ '#/imagesearch?searchType=photo&searchContent=' + tag.text }}">{{'#' + tag.text}}</a></li>
+                        </ul>
+                    </div>
+
+                </div>
+
+            </div><!--
+
+
+            --><div id="detail_image_container_left" >
+
+            <div class='image' ng-show="pupupCtr.image.mediaType=='IMAGE'">
+                <img ng-src="{{pupupCtr.image.retina.url}}">
+            </div>
+            <video ng-show="pupupCtr.image.mediaType=='VIDEO'" src="{{pupupCtr.image.video.fileName | trustUrl}}" width="100%" height="100%" controls></video>
+
+        </div>
+        </div>
+
+
+    </div>
+
+</div>

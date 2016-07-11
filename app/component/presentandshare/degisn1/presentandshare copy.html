@@ -1,0 +1,102 @@
+<div id="presentandshare_main">
+
+    <div id="header">
+        <searchhanger></searchhanger>
+    </div>
+
+    <div id="scope_title">
+        <div class="sub header" ng-bind="pasCtr.curScope.caption | limitTo: 40"></div>
+    </div>
+
+    <div id="ninja-slider">
+        <div class="slider-inner">
+            <ul id="photoManagement_imageList">
+                <li ng-repeat="image in pasCtr.imageArr" class="photoManagement_oneImage">
+                    <a class="ns-img" ng-href="{{image.retina.url}}"></a>
+                    <div class="caption">
+
+                        <div class="image_info_section" ng-show="pasCtr.viewFormate!='imageOnly' && pasCtr.viewFormate!='imageLarge' ">
+                            <!--<div class="image_time_location">-->
+                            <!--<div class="image_time">{{::getShotTime(image.shotTime)}}</div>-->
+                            <!--</div>-->
+
+                            <!--<div class="photo_caption ui tiny header" ng-bind="image.caption" ng-show="image.caption"></div>-->
+                            <div class="photo_info">
+                                <div class="photo_info_left">
+                                    <div class="userName_userAvatar" ng-show="pasCtr.viewFormate!='imageOnly' && pasCtr.viewFormate!='imageLarge'">
+                                        <div class="userAvatar"><a ng-attr-href = "{{determineOriginal(image)}}" target="_blank"><img ng-src="{{image.sourceOwner? image.sourceOwner.profile_picture: image.owner.avatar}}"></a></div>
+                                        <div class="userName_source">
+                                            <div class="userName">{{image.sourceOwner.username?image.sourceOwner.username:image.owner.name}}</div>
+                                            <div class="source">{{'@ ' + determineOriginalText(image)}}</div>
+                                            <div class="time_location">
+                                                <div class="location"><i class="icon tiny marker"></i>{{image.location.address}}</div>
+                                                <div class="image_time" style="margin-left: 0.35em;"><i class=""></i>{{getShotTime(image.shotTime)}}</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div><!--
+
+
+                                --><div class="photo_info_right">
+                                <div class="img_caption" ng-show="image.caption">{{limiteDescription(image.caption)}}</div>
+                                <div class="info" ng-bind="limiteDescription(image.description)"></div>
+                                <div>
+                                    <div class="tag_list">
+                                        <div class="one_tag" ng-repeat="tag in image.tags | limitTo: 10" ><a color colorArr="pasCtr.tagCols" ng-href="{{ '#/imagesearch?searchType=photo&searchContent=' + tag.text}}">{{'#' + tag.text}}</a></div>
+                                    </div>
+                                </div>
+                            </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </li>
+            </ul>
+            <!--<div class="navsWrapper">-->
+            <!--<div id="ninja-slider-prev"></div>-->
+            <!--<div id="ninja-slider-next"></div>-->
+            <!--</div>-->
+        </div>
+    </div>
+    <!--<div id="image_search_list" ng-class="{'container': pasCtr.viewMode=='Compact','container-fluid': pasCtr.viewMode=='Presentation'}">-->
+    <!--<ul id="photoManagement_imageList" masonry="{ transitionDuration: '0s' }" reload-on-resize>-->
+    <!--<li class="photoManagement_oneImage masonry-brick" ng-repeat="image in pasCtr.imageArr">-->
+
+    <!--<div class="userName_userAvatar" ng-show="pasCtr.viewFormate!='imageOnly' && pasCtr.viewFormate!='imageLarge'">-->
+    <!--<div class="userAvatar"><a ng-attr-href = "{{determineOriginal(image)}}" target="_blank"><img ng-src="{{image.sourceOwner? image.sourceOwner.profile_picture: image.owner.avatar}}"></a></div>-->
+    <!--<div class="userName_source">-->
+    <!--<div class="userName">{{image.sourceOwner.username?image.sourceOwner.username:image.owner.name}}</div>-->
+    <!--<div class="source">{{'@ ' + determineOriginalText(image)}}</div>-->
+    <!--<div class="time_location">-->
+    <!--<div class="location"><i class="icon tiny marker"></i>{{image.location.address}}</div>-->
+    <!--<div class="image_time" style="margin-left: 0.35em;"><i class=""></i>{{getShotTime(image.shotTime)}}</div>-->
+    <!--</div>-->
+    <!--</div>-->
+    <!--</div>-->
+
+    <!--&lt;!&ndash; <div ng-attr-class="{{ image.selected && 'selected_border show' || 'selected_border'}}"></div> &ndash;&gt;-->
+    <!--<div class="photoContainer" ng-click="showDetailImage(image,image.id)" ng-mouseover="showRibbon($event)" ng-mouseleave="hideRibbon($event)"><img ng-src="{{image.retina.url}}">-->
+    <!--</div>-->
+
+    <!--<div class="image_info_section" ng-show="pasCtr.viewFormate!='imageOnly' && pasCtr.viewFormate!='imageLarge' ">-->
+    <!--&lt;!&ndash;<div class="image_time_location">&ndash;&gt;-->
+    <!--&lt;!&ndash;<div class="image_time">{{::getShotTime(image.shotTime)}}</div>&ndash;&gt;-->
+    <!--&lt;!&ndash;</div>&ndash;&gt;-->
+
+    <!--&lt;!&ndash;<div class="photo_caption ui tiny header" ng-bind="image.caption" ng-show="image.caption"></div>&ndash;&gt;-->
+    <!--<div class="photo_info">-->
+    <!--<div class="caption">{{limiteDescription(image.caption)}}</div>-->
+    <!--<div class="info" ng-bind="limiteDescription(image.description)"></div>-->
+    <!--<div>-->
+    <!--<ul class="tag_list">-->
+    <!--<li class="one_tag" ng-repeat="tag in image.tags | limitTo: 10" ><a color colorArr="pasCtr.tagCols" ng-href="{{ '#/imagesearch?searchType=photo&searchContent=' + tag.text}}">{{'#' + tag.text}}</a></li>-->
+    <!--</ul>-->
+    <!--</div>-->
+    <!--</div>-->
+    <!--</div>-->
+    <!--</li>-->
+    <!--</ul>-->
+    <!--<loadinganimation ng-show="updating"></loadinganimation>-->
+    <!--</div>-->
+    <div ui-view></div>
+</div>

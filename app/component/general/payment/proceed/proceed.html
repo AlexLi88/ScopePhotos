@@ -1,0 +1,59 @@
+<div id="paymentproceed_main" class="container">
+
+
+
+    <div id="productSelected">
+
+        <div class="item_name" ng-bind="item.name"></div>
+        <div class="item_sku"> SKU: {{item.sku}}</div>
+        <div class="item_description">{{item.description}}</div>
+
+        <div class="item_price">{{item.price}} <span>$ CAD</span></div>
+
+
+    </div><!--
+
+   --><div id="paymethod">
+
+    <div id="payment_method">
+        <div id="paypal" ng-style="{'background':'url(' +  cards + ')' }"></div>
+    </div>
+
+
+    <button class="ui button basic" ng-click="generatePayment()">Continue</button>
+
+
+    <div id="payment_content">
+
+        <form action="https://www.sandbox.paypal.com/cgi-bin/webscr" method="post" target="_top"
+        name="paypal-form" id="paypal_form" ng-show="false">
+        <input type="hidden" name="cmd" value="_cart">
+        <input type="hidden" name="upload" value="1">
+
+        <input type="hidden" name="business" value="{{ payPalSettings.paypal.business }}">
+        <input type="hidden" name="currency_code" value="{{ payPalSettings.paypal.currency_code }}" />
+
+            <div ng-repeat="item in proCtr.order.orderItems track by $index">
+                <input type="hidden" name="item_name_{{$index + 1}}" value="a">
+                <input type="hidden" name="item_number_{{$index + 1}}" value="{{item.id}}">
+                <input type="hidden" name="quantity_{{$index + 1}}" value="{{item.quantity}}">
+                <input type="hidden" name="amount_{{$index + 1}}" value="{{item.amount}}">
+            </div>
+
+
+        <input type="hidden" name="invoice" id="paypal-invoice" value="{{proCtr.order.orderNumber + '-' + proCtr.order.id}}">
+
+        <input type="hidden" name="return" value="{{returnUrl}}">
+        <input type="hidden" name="cancel_return" value="{{cancelReturnUrl}}">
+        <input type="hidden" name="notify_url" value="{{notifyUrl}}">
+
+        <input type="image" src="http://www.paypal.com/en_US/i/btn/x-click-but01.gif" name="submit" alt="Make payments with PayPal - it's fast, free and secure!">
+        </form>
+
+    </div>
+
+
+    </div>
+
+
+</div>

@@ -1,0 +1,346 @@
+#userphotomanagement_main .one_tag{
+
+    display: inline-block;
+    list-style:none;
+    margin-right: 2px;
+    margin-top: 3px;
+    cursor: pointer;
+}
+
+
+#userphotomanagement_main .photo_info .ui.basic.label{
+
+    color: grey;
+    font-weight: 500 !important;
+    border-color: grey;
+    border-radius: 0px;
+}
+
+.content .center .ui.large.label, .ui.large.labels .label{
+
+    font-size: 1rem;
+    background: transparent;
+    border: transparent;
+    color: white;
+}
+
+.content .center .icon{
+
+    background-size: contain;
+    width: 1.2em;
+    height: 1.2em;
+
+}
+#userphotomanagement_main .ui.label>a{
+
+    color: grey !important;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+#userphotomanagement_main #user_image_list ul{
+
+
+padding: 0;
+
+
+}
+
+#userphotomanagement_main #image_control_buttons{
+
+    position: absolute;
+    z-index: 3;
+    bottom: 0;
+    right: 0;
+    width: auto;
+
+}
+
+#userphotomanagement_main .ui.dimmer>.content{
+
+    position: relative;
+}
+
+#userphotomanagement_main .edit_button{
+
+    position: absolute;
+    right: 1%;
+    bottom: 1%;
+}
+
+#userphotomanagement_main .edit_button button{
+
+    padding: 0.5em 1em;
+    font-size: 1em;
+    background: #fa3535;
+    border: none;
+    color: white;
+    border-radius: 5px;
+}
+
+#userphotomanagement_main .edit_button button:active,#userphotomanagement_main .edit_button button:focus{
+
+    outline-width: 0px;
+}
+
+#userphotomanagement_main .edit_button .icon{
+
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+
+#userphotomanagement_main #image_control_buttons .button_top{
+
+
+    border-radius: 5px 0px 0px 0px;
+    padding: 10px;
+    background: #FAFAFA;
+    color: black;
+}
+
+#userphotomanagement_main #image_control_buttons .button_top:hover{
+
+
+    background: gainsboro;
+}
+
+#userphotomanagement_main #image_control_buttons .button_bottom{
+
+    border-radius: 0px;
+    padding: 10px;
+    color: #FAFAFA;
+    background: #D09696;
+}
+
+
+/*#userphotomanagement_main #user_image_list .ui.basic.label{*/
+
+    /*border: none;*/
+    /*background: transparent !important;*/
+    /*font-size: 1.05em;*/
+    /*font-weight: 600;*/
+    /*color: #4A4949;*/
+/*}*/
+
+
+
+#userphotomanagement_main #edit_button i.black.icon{
+
+    margin-right: 0px;
+}
+
+#userphotomanagement_main #edit_button i.black.icon:hover{
+
+    cursor: pointer;
+}
+
+#userphotomanagement_main #page_control{
+
+    text-align: right;
+}
+
+#userphotomanagement_main .one_user_image{
+
+    width: 24%;
+    margin-left: 0.8% !important;
+    margin-top: 1% !important;
+    margin-right: 0 !important;
+    display: inline-block;
+}
+
+#userphotomanagement_main .ui.card>.image, .ui.cards>.card>.image{
+
+
+    cursor: pointer;
+    height: 250px !important;
+    overflow: hidden;
+    border-radius: 0px !important;
+    z-index:1;
+    border-radius: 0;
+    background: white;
+}
+
+#userphotomanagement_main #user_image_list .extra{
+
+    word-break: break-all;
+}
+
+
+@media only screen and (max-width: 500px){
+
+    #userphotomanagement_main .one_user_image{
+
+        width: 90%;
+        margin-left: 5% !important;
+    }
+}
+
+
+#user_image_list .photo_info{
+
+    padding: 5%;
+    background: white;
+    word-break: break-all;
+    color: #636262;
+}
+
+#user_image_list .photo_info .info{
+    font-size: 0.8em;
+    font-weight: 600;
+
+
+}
+
+
+/*#user_image_list .photo_info .ui.basic.label{*/
+
+    /*color: grey;*/
+    /*font-weight: 500 !important;*/
+    /*border-color: grey;*/
+    /*border-radius: 0px;*/
+/*}*/
+
+
+
+#user_image_list .tag_list{
+
+    padding: 0;
+}
+
+#user_image_list .one_tag{
+
+    display: inline-block;
+    list-style:none;
+    margin-right: 2px;
+    margin-top: 3px;
+    cursor: pointer;
+}
+
+#user_image_list .userName_userAvatar{
+
+    width: auto;
+    z-index: 1;
+    padding: 1em;
+    position: relative;
+    padding-right: 0em;
+
+}
+#user_image_list .userAvatar{
+
+    width: 12%;
+    border-radius: 50%;
+    overflow: hidden;
+    display: inline-block;
+    vertical-align: top;
+}
+#user_image_list .userName_source{
+
+    display: inline-block;
+    padding: 0.2em 0.5em;
+    vertical-align: top;
+    width: 85%;
+}
+
+#user_image_list .userName_source .userName{
+
+    font-size: 1.05em;
+    font-weight: 600;
+}
+#user_image_list .userName_source .source{
+
+    font-size: 0.9em;
+    font-weight: 400;
+    color: grey;
+    line-height: 0.9em;
+}
+
+#user_image_list .time_location{
+
+    font-size: 0.9em;
+    font-weight: 400;
+    color: grey;
+    line-height: 1em;
+    margin-top: 3%;
+}
+
+#user_image_list .time_location .location{}
+
+#user_image_list.time_location div{
+
+    display: inline-block;
+}
+
+#user_image_list .blurring.dimmable.image.dimmed {
+
+    border: 1px solid #FA3535;
+
+}
+
+#user_image_list .blurring.dimmable{
+
+    z-index: 0 !important;
+}
+
+#user_image_list .time_location i.tiny.icon, i.tiny.icons{
+
+    line-height: 1;
+    font-size: .85714286rem;
+    margin-right: 0;
+}
+
+#user_image_list .masonry-brick img{
+
+    width:100%;
+    height: auto;
+    cursor: pointer;
+}
+
+.masonry-brick{
+
+    width: 19%;
+    margin-left: 1%;
+    margin-top: 0.2em;
+    display: inline-block;
+    opacity: 0;
+    transition: opacity 1s;
+    position: relative;
+    background: white;
+    border: 1px solid #ECEBEB;
+    /* transition: transform .5s,box-shadow .5s, opacity .5s; */
+}
+.masonry-brick.loaded{
+
+    opacity: 1;
+}
+
+
+
+
+
+@media only screen and (max-width: 800px){
+
+    .masonry-brick{
+
+        width: 49%;
+        margin-left: 0.5%;
+        margin-top: 0.2em;
+        display: inline-block;
+        opacity: 0;
+        transition: opacity 1s;
+        position: relative;
+        background: white;
+        border: 1px solid #ECEBEB;
+        /* transition: transform .5s,box-shadow .5s, opacity .5s; */
+    }
+}

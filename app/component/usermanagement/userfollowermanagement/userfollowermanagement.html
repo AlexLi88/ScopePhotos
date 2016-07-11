@@ -1,0 +1,28 @@
+<div id="userfollower_main">
+    <errormessage ng-show="userFollowerManagementCtr.showErrorMessage" errorType="nouserfollower"></errormessage>
+    <div class="container">
+
+        <div>
+            <div class="one_follower" ng-repeat="follower in userFollowerManagementCtr.followerArray">
+                <div class="image">
+                    <img ng-src="{{follower.avatar}}">
+                </div><!--
+                --><div class="one_follower_info">
+
+                <a class="follower_name" ng-href="{{ '#/user/' + follower.id + '/photo'  }}">{{follower.name}}</a>
+                <div class="follow_buttons">
+                <div class="follow_button" ng-show="!follower.following"><button class="ui inverted mini red button" ng-click="followUser(follower)">
+                    <i class="icon add user"></i>
+                    Follow
+                </button></div>
+                <div class="un_follow_button" ng-show="follower.following"><button class="ui inverted mini red button" ng-click="unFollowUser(follower)">
+                    <i class="user icon"></i>
+                    Followed
+                </button></div>
+                </div>
+            </div>
+            </div>
+        </div>
+
+    </div>
+</div>

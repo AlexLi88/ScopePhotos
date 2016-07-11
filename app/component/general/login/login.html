@@ -1,0 +1,209 @@
+<div id="log_in_directive_div" ng-style="{'background':'url(' + loginCtr.bg + ')'}" ng-show="true">
+
+    <div id="content">
+
+        <div id="switch">
+            <div class="tab" ng-class="{select : loginCtr.selected == 'login'}" ng-click="showLog()">Login</div>
+            <div class="tab" ng-class="{select : loginCtr.selected == 'register'}" ng-click="showReg()">Register</div>
+        </div>
+
+    <form id="login" ng-submit="login(userEmail,userPassword)">
+
+        <div class="field">
+            <div id="t">Email</div>
+            <div id="c">
+                <input type="email"  ng-model="userEmail" required>
+            </div>
+        </div>
+
+        <div class="field">
+            <div id="t">Password</div>
+            <div id="c">
+                <input type="password" ng-model="userPassword" required>
+            </div>
+        </div>
+        <a>Forgot password?</a>
+        <div id="form_control">
+        <button class="ui green button" ng-class="{'loading': loginCtr.userLogining == true,'disabled':loginCtr.userLogining == true}" type="submit">Login</button></div>
+
+        <div class="ui error message" ng-show="loginCtr.loginError">
+            <div class="header">Error</div>
+             <p>Invalid user email or password,please check again</p>
+        </div>
+
+    </form>
+
+        <form id="register" ng-submit="register(newUserName,newUserEmail,newUserPassword,newUserConfirmPassword)" ng-required="true">
+
+            <div class="field">
+                <div id="t">Name</div>
+                <div id="c">
+                    <input type="text"  ng-model="newUserName" required>
+                </div>
+            </div>
+
+            <div class="field">
+                <div id="t">Email</div>
+                <div id="c">
+                    <input type="email"  ng-model="newUserEmail" required>
+                </div>
+            </div>
+
+            <div class="field">
+                <div id="t">Password</div>
+                <div id="c">
+                    <input type="password" pattern=".{6,}" placeholder="At least 6 characters" ng-model="newUserPassword" required title="6 characters minimum">
+                </div>
+            </div>
+            <div class="field">
+                <div id="t">Confirm Password</div>
+                <div id="c">
+                    <input type="password" pattern=".{6,}" placeholder="Same as above" ng-model="newUserConfirmPassword" required>
+                </div>
+            </div>
+
+            <div class="ui small error message" ng-show="loginCtr.registerConfirmPasswordError">
+                <div class="header">Error</div>
+                <p>Make sure that your confirm password is identical to your password.</p>
+            </div>
+
+            <div class="ui small error message" ng-show="loginCtr.registerEmailUsedError">
+                <div class="header">Error</div>
+                <p>The email address you entered has already been registered, please try another one.</p>
+            </div>
+
+            <div id="form_control">
+                <button class="ui button" ng-class="{'loading': loginCtr.registering == true,'disabled':loginCtr.registering == true}" type="submit">Register</button></div>
+
+            <div id="tou">Clicking Register confirms you've read and agree to <a>Terms of Use</a></div>
+
+
+        </form>
+
+        <!--<div id="form_t">-->
+
+            <!--login-->
+            <!--&lt;!&ndash;<div class="ui horizontal divider header">&ndash;&gt;-->
+                <!--&lt;!&ndash;login&ndash;&gt;-->
+            <!--&lt;!&ndash;</div>&ndash;&gt;-->
+
+        <!--</div>bg-->
+
+
+     <!--    <div class="ui top attached tabular menu">
+
+            <a class="active red item">
+                Login
+            </a>
+
+        </div> -->
+
+        <!--<div class="ui bottom attached segment">-->
+
+            <!--<form class="ui form" ng-submit="login(userEmail,userPassword)">-->
+
+            <!--<h4 class="ui dividing red header">Log In to Scope</h4>-->
+
+                <!--<div class="field">-->
+                    <!--<label>User Email</label>-->
+                    <!--<input type="text"  ng-model="userEmail" required>-->
+                <!--</div>-->
+                <!--<div class="field">-->
+                    <!--<label>Password</label>-->
+                    <!--<input type="password" ng-model="userPassword" required>-->
+                <!--</div>-->
+                 <!--<div class="ui error message" ng-show="loginCtr.loginError">-->
+    <!--<div class="header">Error</div>-->
+    <!--<p>Invalid user email or password,please check again</p>-->
+  <!--</div>-->
+                <!--<div id="form_control">-->
+                <!--<button class="ui green button" ng-class="{'loading': loginCtr.userLogining == true,'disabled':loginCtr.userLogining == true}" type="submit">Submit</button></div>-->
+
+            <!--</form>-->
+
+        <!--</div>-->
+
+
+        <!--<form class="ui form">-->
+
+        <!--<h4 class="ui dividing header">Log In to Scope</h4>-->
+
+        <!--</form>-->
+    <!--</div>&lt;!&ndash;-->
+
+        <!--&ndash;&gt;<div id="register">-->
+
+
+            <!--<div id="form_t">-->
+
+                <!--register-->
+                <!--&lt;!&ndash;<div class="ui horizontal divider header">&ndash;&gt;-->
+                <!--&lt;!&ndash;login&ndash;&gt;-->
+                <!--&lt;!&ndash;</div>&ndash;&gt;-->
+            <!--</div>-->
+
+            <!--<div class="field">-->
+                <!--<div id="t">Email</div>-->
+                    <!--<div class="ui divider"></div>-->
+                <!--<div id="c">-->
+                    <!--<input type="email"  ng-model="newUserEmail" required>-->
+                <!--</div>-->
+            <!--</div>-->
+
+        <!--</div>-->
+
+    <!--<div class="ui horizontal divider">-->
+        <!--Or-->
+    <!--</div>-->
+
+    <!--<div class="ui" id="login_segment" ng-show="loginCtr.userType == 'visitor'">-->
+
+        <!--<div class="ui bottom attached segment">-->
+
+            <!--<form class="ui form" ng-submit="register(newUserName,newUserEmail,newUserPassword,newUserConfirmPassword)" ng-required="true">-->
+
+                <!--<h4 class="ui dividing blue header">Resgister a new account</h4>-->
+
+                <!--<div class="field">-->
+                    <!--<label>Name</label>-->
+                    <!--<input type="text"  ng-model="newUserName" required>-->
+                <!--</div>-->
+                <!--<div class="field">-->
+                    <!--<label>User Email</label>-->
+                    <!--<input type="email"  ng-model="newUserEmail" required>-->
+                <!--</div>-->
+                <!--<div class="field">-->
+                    <!--<label>Password</label>-->
+                    <!--<input type="password" ng-model="newUserPassword" placeholder="At least 6 characters.." ng-minlength="6" required>-->
+                <!--</div>-->
+
+                <!--<div class="field">-->
+                    <!--<label>Confirm Password</label>-->
+                    <!--<input type="password" ng-model="newUserConfirmPassword" placeholder="Retype your password.." required>-->
+                <!--</div>-->
+
+                <!--<div class="ui error message" ng-show="loginCtr.registerPasswordLengthError">-->
+                 <!--<div class="header">Error</div>-->
+                         <!--<p>Make sure that your password is at least 6 characters long.</p>-->
+                <!--</div>-->
+
+                <!--<div class="ui error message" ng-show="loginCtr.registerConfirmPasswordError">-->
+                    <!--<div class="header">Error</div>-->
+                        <!--<p>Make sure that your confirm password is identical to your password.</p>-->
+                <!--</div>-->
+
+                <!--<div class="ui error message" ng-show="loginCtr.registerEmailUsedError">-->
+                    <!--<div class="header">Error</div>-->
+                        <!--<p>The email address you entered has already been registered, please try another one.</p>-->
+                <!--</div>-->
+
+                <!--<div id="form_control">-->
+                <!--<button class="ui blue button" ng-class="{'loading': loginCtr.registering == true,'disabled':loginCtr.registering == true}" type="submit">Register</button></div>-->
+
+            <!--</form>-->
+
+        <!--</div>-->
+    <!--</div>-->
+
+    </div>
+</div>

@@ -1,0 +1,136 @@
+#faqmain_div{
+
+    font-family: "Source Sans Pro";
+}
+
+#faq_title{
+
+    text-align: center;
+    padding: 2%;
+    font-size: 30px;
+    font-weight: 400;
+}
+
+#faq_content{
+
+    padding: 0.5em;
+    padding-bottom: 1.5em;
+}
+
+
+.dropdown_i{
+
+    display:inline-block;
+}
+
+.faq_field{
+
+    position: relative;
+    margin-top: 2%;
+}
+
+.faq_field h4{
+
+    display: inline-block;
+    margin-bottom: 1em;
+    font-size: 1.2em;
+    max-width: 80vw;
+}
+
+.field_title{
+
+    padding-bottom: 5px;
+    border-bottom: 1px solid gainsboro;
+}
+
+.faq_field .dropdown_i{
+
+    position: absolute;
+    right: 0;
+    width: 1.5em;
+    height: 1.5em;
+    top: 0.75em;
+    cursor: pointer;
+}
+
+.faq_field .dropdown_field{
+
+    max-height: 200px;
+    overflow: hidden;
+    transition: all 1s ease;
+}
+
+.faq_field .dropdown_field.notShow{
+
+    max-height:0px;
+
+}
+
+
+
+.faq_field .dropdown_i img{
+
+    border: 0;
+    width: 100%;
+}
+
+.dropdown_content{
+
+    padding: 2%;
+    font-size: 16px;
+}
+
+.dropdown_content img{
+
+    width:80%;
+    left: 10%;
+}
+
+/*#faq_content{*/
+
+    /*padding: 2%;*/
+    /*margin-top: 15px;*/
+/*}*/
+
+/*#faq_content h4{*/
+
+    /*margin-top: 20px;*/
+/*}*/
+
+#faq_sub_title{
+
+    text-align: center;
+    font-size: 15px;
+    font-weight: 400;
+    margin-bottom: 50px;
+}
+
+@media only screen and (max-width: 700px){
+
+
+    #faqmain_div{
+
+        padding: 5% 1%;
+    }
+
+    #faq_title{
+
+        margin-bottom: 3vw;
+    }
+
+    #faq_sub_title{
+
+        font-size: 3.5vw;
+    }
+
+    #faq_content{
+
+        padding: 3vw;
+    }
+
+    .faq_field{
+
+        margin-top: 5%;
+    }
+
+}

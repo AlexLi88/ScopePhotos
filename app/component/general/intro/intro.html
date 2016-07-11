@@ -1,0 +1,284 @@
+<div id="intro_main">
+
+    <div id="fix_c">
+
+        <div id="bgw" data-0="transform: translateY(0px);opacity:1" data-700="transform: translateY(-100px);opacity:0.2">
+
+            <div rotate class="bg" ng-repeat="i in coverImgList">
+
+                <img ng-src="{{i}}">
+
+            </div>
+
+        </div>
+
+        <div id="web_c" data-0="transform: translateY(0px);opacity:1" data-700="transform: translateY(-100px);opacity:0.2">
+
+            <div id="title">
+                Search.Share.Stream
+            </div>
+            <div id="search">
+                <div id="social_icons">
+                    <img ng-src="{{social_icons}}">
+                </div>
+                <form ng-submit="doSearch(searchContent)">
+                <div class="ui icon big fluid input">
+                    <i class="search link icon" ng-style="{'background-image':'url('+ searchI +')'}"  ng-click="doSearch(searchContent)"></i>
+                    <input type="text" placeholder="Search Social Images" ng-model="searchContent">
+                </div>
+                </form>
+            </div>
+
+            <div id="download">
+
+                <!--<div id="down_n">Download Now</div>-->
+                <div id="down_i">
+
+                    <a href="https://itunes.apple.com/app/id911111086" target="_blank"><div class="i"><img ng-src="{{appStr}}"></div></a>
+                    <a href="https://play.google.com/store/apps/details?id=com.scopemedia.android" target="_blank"><div class="i"><img ng-src="{{gooStr}}"></div></a>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <div id="main_c">
+
+        <div id="intro">
+
+            <div id="intro_left">
+
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/lNQElHosibU" frameborder="0" allowfullscreen></iframe>
+
+
+            </div><!--
+            --><div id="intro_right">
+
+                <div id="title">
+                    How Scope Works
+                </div>
+                <div id="content">
+                    <div id="p1">
+                        Scope is a search engine for social media images.<br>
+                        Scope creates dynamic albums, aggregated with social images by location/time/topic, allowing users to search and broadcast across platforms.
+                    </div>
+                    <!--<div id="p2">-->
+                        <!--Scope creates dynamic albums, aggregated with social images by location/time/topic, allowing users to search and broadcast across platforms.-->
+                    <!--</div>-->
+                </div>
+
+                <div id="download">
+                    <button ng-click="downloadApp()" class="ui big red button">
+                        Download →</button>
+                </div>
+             </div>
+
+        </div>
+
+
+        <div id="feature">
+
+            <div id="feature_right" class="sm">
+                <img ng-src="{{mockUp_phone}}">
+                <div id="mock_up_container">
+                    <img ng-src="{{getMockUrl()}}">
+                </div>
+            </div>
+
+
+            <div id="feature_right">
+                <img ng-src="{{mockUp_phone}}">
+                <div id="mock_up_container">
+                    <img ng-src="{{getMockUrl()}}">
+                </div>
+
+            </div>
+
+
+                <div id="feature_left">
+                    <div id="title">App Features</div>
+                    <div class="one_f" ng-repeat="f in fList" ng-click="chageSelF(f.title)" ng-class="{'select': selectedFeature == f.title}">
+
+                        <div id="one_f_r">
+                            <img ng-src="{{selectedFeature == f.title && f.icon.s || f.icon.u}}"/>
+                        </div>
+                        <div id="one_f_l">
+
+                            <div id="feature_title">{{f.featureTitle}}</div>
+                            <div id="feature_content">
+                                {{f.featureContent}}
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+
+        </div>
+
+        <div id="scope_live">
+            <div id="l">
+                <div id="title">Scope Live!</div>
+                <div id="intro">
+                    With Scope Live, you can now broadcast photos in presentation mode for your next conference, meeting, or wedding.
+                </div>
+                <div class="one_live">
+                    <div class="one_live_left"><i class="check red circle icon"></i></div><div class="one_live_right">Big Screen Content: Broadcast Scope albums with the live streaming option
+                </div></div>
+                <div class="one_live">  <div class="one_live_left"><i class="check red circle icon"></i></div><div class="one_live_right">View “The Big Picture” by pulling images from Instagram, Twitter, Tumblr, and more</div></div>
+                <div class="one_live"> <div class="one_live_left"> <i class="check red circle icon"></i></div><div class="one_live_right">Share links of your Scope albums to your other social media accounts</div></div>
+                <div class="one_live">  <div class="one_live_left"><i class="check red circle icon"></i></div><div class="one_live_right">Embed Scope Live within your website with live or static photos</div></div>
+            </div><!--
+            --><div id="r">
+
+
+            <img ng-src="{{macBook}}" id="macbook">
+
+
+            </div>
+
+        </div>
+
+        <div id="scope_partner">
+
+            <div id="scope_partner_left">
+            <div id="title">Become a partner</div>
+            <div id="content">
+                <div>Use <b>Scope</b> to help grow your business!</div>
+                <div style="text-align: center;
+    font-size: 1.5em;
+    padding-top: 0.5em;
+    font-weight: bold;"><a href="#/btob">Read More →</a></div>
+
+                <!--Use <b>Scope</b> to help grow your business! Understand and connect with your ever-growing-->
+                <!--audience's activities across major social media platforms.-->
+
+                <!--<a href="#/btob"><button>Read More ></button></a>-->
+            </div>
+            </div>
+
+        </div>
+
+        <div id="scope_live_example" class="">
+
+            <div id="title">Trending Now</div>
+
+            <!--<div class="oneScope wide">-->
+                <!--<img ng-src="https://scopemedia1.s3.amazonaws.com/17492/COVER467793_93679016.jpg?AWSAccessKeyId=AKIAJQNYXPZ4Z6QWKHVQ&Expires=1461272352&Signature=y6G2JlL3e5BVV%2BWNs7Ce1QDSL8Y%3D">-->
+            <!--</div>-->
+
+            <!--<div class="oneScope wide">-->
+                <!--<img ng-src="https://scopemedia1.s3.amazonaws.com/17492/COVER467764_93621576.jpg?AWSAccessKeyId=AKIAJQNYXPZ4Z6QWKHVQ&Expires=1461272352&Signature=ZP7A5oISse47xVcSIlGYZuWDnXI%3D">-->
+            <!--</div>-->
+
+
+            <!--<div class="oneScope">-->
+                <!--<img ng-src="https://scopemedia1.s3.amazonaws.com/17492/COVER466002_93260308.jpg?AWSAccessKeyId=AKIAJQNYXPZ4Z6QWKHVQ&Expires=1461272584&Signature=CDjU3vtmo0Be6Y7%2BLrPmUXcu%2B%2FI%3D">-->
+            <!--</div>-->
+
+            <!--<div class="oneScope">-->
+                <!--<img ng-src="https://scopemedia1.s3.amazonaws.com/17492/COVER467379_93459423.jpg?AWSAccessKeyId=AKIAJQNYXPZ4Z6QWKHVQ&Expires=1461272490&Signature=pyOe2xjr88izoUg4GpOxpCF7qsk%3D">-->
+            <!--</div>-->
+
+            <!--<div class="oneScope">-->
+                <!--<img ng-src="https://scopemedia1.s3.amazonaws.com/17492/COVER467765_93622066.jpg?AWSAccessKeyId=AKIAJQNYXPZ4Z6QWKHVQ&Expires=1461272490&Signature=TpRQSuLHQUN2nSGPabjzZv8Ph9Y%3D">-->
+            <!--</div>-->
+
+            <!--<div class="oneScope">-->
+                <!--<img ng-src="http://www.myriadexpressions.com/wp-content/uploads/2015/07/santamonica.jpg">-->
+            <!--</div>-->
+            <!--<div class="oneScope">-->
+                <!--<img ng-src="http://images.nationalgeographic.com/wpf/media-live/photos/000/823/cache/stanley-park-aerial-vancouver_82350_990x742.jpg">-->
+            <!--</div>-->
+            <!--<div class="oneScope">-->
+                <!--<img ng-src="https://scopemedia1.s3.amazonaws.com/17492/COVER466040_93347453.jpg?AWSAccessKeyId=AKIAJQNYXPZ4Z6QWKHVQ&Expires=1461272781&Signature=w4kyQPwVQeoI8ii1agmYjZPmn7Q%3D">-->
+            <!--</div>-->
+
+            <div id="scope_list" masonry="{ transitionDuration: '0s' }" reload-on-resize>
+
+                <div class="oneScope masonry-brick" ng-class="{wide:$index == 0 || $index == 1 }" ng-repeat="oneScope in exampleScopeArray  track by $index" ng-click="showScopeDetail(oneScope)">
+                    <div ng-show="oneScope != null">
+                        <div class="scopeInfo">
+                            <span class="scopeTitle">{{oneScope.caption}}</span>
+                            <div class="scope_time_loc">
+                            <div class="scopeLocation"><i class="icon small marker"></i>{{oneScope.location.address}}</div>
+                            <div class="scopeTime" ng-show="oneScope.startTime"> <i class="icon small wait"></i> <span class="scopeLocation">{{oneScope.startTime| date:"MM-dd-yyyy"}}</span> -
+                            <span class="scopeLocation">{{oneScope.endTime | date:"MM-dd-yyyy"}}</span>
+                                </div>
+                        </div>
+                        <div class="scopeCover"><img ng-src="{{oneScope.coverImage}}">
+                    </div>
+                </div>
+
+            </div>
+
+            </div>
+        </div>
+</div>
+
+        <div id="benefit" ng-show="none">
+
+            <div id="benefit_l">
+
+                <div id="benefit_title">Top Benefits and advantages of being a Scope Partner.</div>
+
+                <div class="one_b">
+
+                    <i class="check red circle icon"></i>
+                    Become a featured business on in app home page
+                </div>
+                <div class="one_b">
+
+                    <i class="check red circle icon"></i>
+                    Ability to view "The Big Picture" by pulling images via the biggest players in social media
+                </div>
+                <div class="one_b">
+
+                    <i class="check red circle icon"></i>
+                    Get an accurate view of your customer engagement through in app impression counts
+                </div>
+                <div class="one_b">
+
+                    <i class="check red circle icon"></i>
+                    Create Fan Folders to where engagged customers can share actual photos from your various establishments as well as to receive directions to such establishments
+                </div>
+                <div class="one_b">
+
+                    <i class="check red circle icon"></i>
+                    Create a historial event timeline of your business to allow your customers easy access to your past events!
+                </div>
+            </div><!----><div id="benefit_r" ng-style="{'background-image':'url('+ ip6s +')'}" >
+       </div>
+
+    </div>
+
+        <div id="download_p">
+
+            <!--<div id="download_p_l" ng-style="{'background':'url('+ appMoc + ')'}">-->
+            <div id="download_p_l">
+
+                <img ng-src="{{appMoc}}">
+            </div><!--
+            --><div id="download_p_r">
+
+            <!--<div id="title">Download Now !</div>-->
+
+            <div id="sub_title">
+                Scope helps you to easily connect with people while creating and sharing your own story.
+            </div>
+
+            <div id="download_i">
+               <a ng-style="{'background-image':'url('+ download_icon +')'}" href="https://itunes.apple.com/app/id911111086" target="_blank"></a>
+               <a id="google_download_i" ng-style="{'background-image':'url('+ download_icon +')','background-position-x':'-160px'}" href="https://play.google.com/store/apps/details?id=com.scopemedia.android" target="_blank"></a>
+
+            </div>
+
+        </div>
+
+        </div>
+
+</div>
+

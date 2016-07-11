@@ -1,0 +1,57 @@
+#presentandembed_main{
+
+  #floatthree_main{
+
+    .photoManagement_oneImage{
+
+      opacity: 1;
+      vertical-align: top;
+      width: 32%;
+      margin-left: 1%;
+      box-shadow: 8px 8px 10px rgba(0, 0, 0, 0.33);
+
+    }
+
+    #photoManagement_imageList{
+
+      padding-top: 6% !important;
+      max-width: 70vw;
+
+      @media (max-width: 1100px) {
+
+        max-width: 80vw;
+
+      }
+      @media (max-width: 900px) {
+
+        max-width: 90vw;
+
+      }
+
+      @media (max-width: 750px) {
+
+        .photoManagement_oneImage {
+
+          width: 48% !important;
+
+        }
+
+      }
+
+      @media (max-width: 600px) {
+
+        .photoManagement_oneImage {
+
+          width: 95% !important;
+          margin-left: 2.5% !important;
+
+        }
+
+      }
+
+
+    }
+
+  }
+}
+

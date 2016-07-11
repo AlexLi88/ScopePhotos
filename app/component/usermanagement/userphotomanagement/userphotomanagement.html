@@ -1,0 +1,69 @@
+<div id="userphotomanagement_main" class="container-fluid">
+
+    <!--<div id="page_control">-->
+        <!--<uib-pagination total-items="userPhotoManagementCtr.numOfMedia"-->
+                        <!--items-per-page="userPhotoManagementCtr.pageSize"-->
+                        <!--max-size="5"-->
+                        <!--class="pagination-sm"-->
+                        <!--boundary-links="true"-->
+                        <!--rotate="false"-->
+                        <!--ng-model="userPhotoManagementCtr.pageNo"-->
+                        <!--ng-click="getImageList()"></uib-pagination>-->
+    <!--</div>-->
+
+    <div id="user_image_list">
+        <ul masonry="{ transitionDuration: '0s' }">
+            <li class="photoManagement_oneImage masonry-brick" ng-repeat="image in userPhotoManagementCtr.imageArr">
+
+
+
+
+
+
+                <div class="userName_userAvatar">
+                    <!--<div class="ui blue right ribbon label" ng-show="image.sourceType != 'PX' && image.sourceType != 'SM'"><i class="icon white" ng-class="determineOriginalIcon(image)"></i></div>-->
+                    <div class="userAvatar"><a ng-attr-href = "{{determineOriginal(image)}}" target="_blank"><img ng-src="{{image.sourceOwner? image.sourceOwner.profile_picture: image.owner.avatar}}"></a></div>
+                    <div class="userName_source">
+                        <div class="userName">{{image.sourceOwner.username?image.sourceOwner.username:image.owner.name}}</div>
+                        <div class="source">{{'@ Scope'}}</div>
+                        <div class="time_location">
+                            <div class="location"><i class="icon tiny marker"></i>{{image.location.address}}</div>
+                            <div class="image_time" style="margin-left: 0.35em;"><i class=""></i>{{getShotTime(image.shotTime)}}</div>
+                        </div>
+                    </div>
+                </div>
+
+                 <div ng-attr-class="{{ image.selected && 'selected_border show' || 'selected_border'}}"></div>
+                <div class="blurring dimmable image" ng-mouseover="showDimmer($event)" ng-mouseleave="hideDimmer($event)">
+                <div class="ui dimmer" ng-click="showDetailImage(image.id)">
+                <div class="content">
+                <div class="center">
+
+                <div class="ui basic large label ng-binding"><i  ng-style="{'background-image':'url('+ likeI +')'}" class="icon" ></i>{{ formateCount(image.stats.likeCount) }}</div>
+                <div class="ui basic large label ng-binding"><i  ng-style="{'background-image':'url('+ viewI +')'}" class="icon"></i>{{formateCount(image.stats.viewCount)}}</div>
+                <div class="ui basic large label ng-binding"><i  ng-style="{'background-image':'url('+ commentI +')'}" class="icon"></i>{{formateCount(image.stats.commentCount)}}</div>
+                </div>
+                    <div class="edit_button" ng-show="userPhotoManagementCtr.userType == 'owner'"><button ng-click="editImage(image,$event)"><i  class="icon" ng-style="{'background-image':'url('+ editI +')'}" ></i>Edit</button></div>
+                </div>
+                </div>
+                <img ng-src="{{image.retina.url}}">
+                </div>
+
+                <div class="image_info_section" ng-show="imageCtr.viewFormate!='imageOnly'">
+                    <div class="photo_info">
+                        <div class="info" ng-bind="limiteDescription(image.description)"></div>
+                        <div>
+                            <ul class="tag_list">
+                                <li class="one_tag" ng-repeat="tag in image.tags | limitTo: 10" ><a class="ui tiny basic label" ng-href="{{ '#/imagesearch?searchType=photo&searchContent=' + tag.text}}">{{'#' + tag.text}}</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </div>
+    <loadinganimation ng-show="updating"></loadinganimation>
+    <errormessage ng-show="userPhotoManagementCtr.showErrorMessage" errorType="nouserimage"></errormessage>
+    <di ui-view></di>
+
+</div>

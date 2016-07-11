@@ -1,0 +1,67 @@
+#paymentproceed_main{
+
+  padding: 5em 5em;
+
+  #productSelected,#paymethod{
+
+    display: inline-block;
+    width:45%;
+    margin-left: 2.5%;
+    height:500px;
+    border:1px solid gainsboro;
+    vertical-align: top;
+  }
+
+  #productSelected{
+
+    padding: 1.5em;
+    position:relative;
+
+    .item_name{
+
+      font-weight: bold;
+      font-size: 1.4em;
+      padding-bottom: 0.5em;
+      border-bottom: 1px solid gainsboro;
+    }
+
+    .item_sku{
+
+      font-size: 0.8em;
+      color: grey;
+      padding: 0.2em 0em;
+    }
+
+    .item_price{
+      position: absolute;
+      padding: 0.5em;
+      right: 0;
+      bottom: 0;
+      font-size: 1.5em;
+      color: #fa3535;
+
+      span{
+
+        font-size: 0.7em;
+      }
+    }
+  }
+
+  #payment_method{
+
+    padding: 1em;
+    border-bottom: 1px solid gainsboro;
+    display: inline-block;
+    padding-top: 1.5em;
+    #paypal{
+
+      background-repeat:no-repeat;
+      width: 78px;
+      height: 20px;
+      background-position: -175px 0 !important;
+      display: inline-block;
+    }
+  }
+
+
+}

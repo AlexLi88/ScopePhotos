@@ -1,0 +1,70 @@
+<div id="map_search_main">
+
+    <div id="map_search_title">
+        <searchhanger></searchhanger>
+        <!--<div ng-bind="'#' + imageCtr.searchContent"></div>-->
+    </div>
+
+    <div id="map_search_left">
+        <div id="map"></div>
+        <!--<div id="location_search" ng-show="imageCtr.viewFormate!='imageOnly' && imageCtr.viewFormate!='imageLarge' ">-->
+
+        <!--<form ng-submit="searchForLocation()">-->
+        <!--<div class="ui icon input fluid">-->
+        <!--<input data-content="Press enter to search the input location, or use the marker on the right to get your current location" type="text" placeholder="Search for a location ..." ng-model="searchingLocation">-->
+        <!--<i ng-click="getCurrentLocation()" class="inverted circular marker pink link icon"></i>-->
+        <!--</div>-->
+        <!--&lt;!&ndash;<input class="ui search" ng-model="searchingLocation" placeholder="Search for a location...">&ndash;&gt;-->
+        <!--</form>-->
+
+        <!--</div>-->
+    </div><!--
+    --><div id="map_search_right">
+    <div id="image_search_list" class="container-fluid">
+        <ul id="map_image_list" masonry="{ transitionDuration: '0s' }">
+            <li class="photoManagement_oneImage masonry-brick" ng-repeat="image in imageArr">
+                <div class="userName_userAvatar"  ng-show="viewFormate!='imageOnly' && viewFormate!='imageLarge' ">
+                    <!--<div class="ui blue right ribbon label" ng-show="image.sourceType != 'PX' && image.sourceType != 'SM'"><i class="icon white" ng-class="determineOriginalIcon(image)"></i></div>-->
+                    <div class="userAvatar"><a ng-attr-href = "{{determineOriginal(image)}}" target="_blank"><img ng-src="{{image.sourceOwner? image.sourceOwner.profile_picture: image.owner.avatar}}"></a></div>
+                    <div class="userName_source">
+                        <div class="userName">{{image.sourceOwner.username?image.sourceOwner.username:image.owner.name}}</div>
+                        <div class="source">{{'@ ' + determineOriginalText(image)}}</div>
+                        <div class="time_location">
+                            <div class="location"><i class="icon tiny marker"></i>{{image.location.address}}</div>
+                            <div class="image_time" style="margin-left: 0.35em;"><i class=""></i>{{getShotTime(image.uploadTime)}}</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- <div ng-attr-class="{{ image.selected && 'selected_border show' || 'selected_border'}}"></div> -->
+                <div class="photoContainer" ng-click="showDetailImage(image,image.id)" ng-mouseover="showRibbon($event)" ng-mouseleave="hideRibbon($event)"><img ng-src="{{image.retina.url}}">
+                </div>
+
+                <div class="image_info_section" ng-show="viewFormate!='imageOnly' && viewFormate!='imageLarge' ">
+                    <!--<div class="image_time_location">-->
+                    <!--<div class="image_time">{{::getShotTime(image.shotTime)}}</div>-->
+                    <!--</div>-->
+
+                    <!--<div class="photo_caption ui tiny header" ng-bind="image.caption" ng-show="image.caption"></div>-->
+                    <div class="photo_info">
+                        <div class="info" ng-bind="limiteDescription(image.description)"></div>
+                        <div>
+                            <ul class="tag_list">
+                                <li class="one_tag" ng-repeat="tag in image.tags | limitTo: 10" ><a class="ui basic label" ng-href="{{ '#/imagesearch?searchType=photo&searchContent=' + tag.text}}">{{'#' + tag.text}}</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </li>
+        </ul>
+        <!--     <div id="view_more_photo">
+                <a ng-href="{{ '#/imagesearch?searchType=location&searchContent=Around The World&searchId=' + locationLatitude + ',' + locationLongitude }}">View More Photos</a>
+            </div> -->
+    </div>
+
+
+
+</div>
+    <div ui-view></div>
+    <loadinganimation ng-show="updating"></loadinganimation>
+</div>

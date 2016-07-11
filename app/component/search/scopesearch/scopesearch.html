@@ -1,0 +1,81 @@
+<div id="scope_search_main">
+
+    <div id="scope_search_title">
+        <searchhanger></searchhanger>
+    </div>
+    <errormessage ng-show="scopeCtr.showErrorMessage" errorType="noscope"></errormessage>
+
+    <div id="scope_search_left">
+
+        <ul id="scope_list" class="container" masonry="{ transitionDuration: '0s' }">
+
+            <li class="ui one_scope masonry-brick" ng-repeat="scope in scopeCtr.scopeArr">
+
+                <div class="image" id="cover_image" ng-click="showScopeDetail(scope)">
+
+                    <img ng-src="{{scope.coverImage}}" ng-mouseenter="showScopeTitle($event)" ng-mouseleave="hideScopeTitle($event)">
+                </div>
+
+
+                <div class="scope_info_section">
+                    <div class="scope_bg"></div>
+                    <div class="scope_title" ng-bind="scope.caption"></div>
+
+                            <div class="scope_stats">
+
+                                <span><i class="heart icon"></i>{{scope.stats.likeCount}}</span>
+                                <span><i class="share icon"></i>{{scope.stats.shareCount}}</span>
+                                <span><i class="eye icon"></i>{{scope.stats.viewCount}}</span>
+
+                            </div>
+                </div>
+
+                                <div class="userName_userAvatar">
+                    <!--
+                --><div class="userAvatar"><a ng-attr-href = "{{'#/user/' + scope.owner.id}}" target="_blank"><img ng-src="{{scope.owner? scope.owner.avatar: ''}}"></a>
+                    </div>
+                </div>
+
+            </li>
+        <!--     <li class="one_scope" ng-repeat="scope in scopeCtr.scopeArr">
+                <div class="content">
+
+                        <img class="ui avatar image" ng-src="{{scope.owner.avatar}}">{{scope.owner.name}}
+
+                </div>
+                <div class="image" id="cover_image" ng-click="showScopeDetail(scope)">
+                    <img ng-src="{{scope.coverImage}}">
+
+                </div>
+
+                <div class="content">
+                    <div class="ui tiny blue header" ng-bind="scope.caption"></div>
+                    <div class="ui basic right label">
+                        <i class="eye icon"></i>{{scope.stats.viewCount}}
+                    </div>
+                </div>
+
+                <!--<div class ="extra content">-->
+
+                    <!--<div class="ui basic label">-->
+                        <!--<i class="eye icon"></i>{{scope.stats.viewCount}}-->
+                    <!--</div>-->
+
+                <!--</div>-->
+
+                <!--<img ng-src="{{scope.coverImage}}">-->
+                <!--<div class="scope_background" ng-class="{hovered: scope.hovered}" ng-mouseover="scope.hovered = true"></div>-->
+                <!--<div class="scope_info">-->
+                    <!--<div ng-bind="scope.caption"></div>-->
+                    <!--&lt;!&ndash;<div ng-bind="scope.caption"></div>&ndash;&gt;-->
+                    <!--&lt;!&ndash;<div ng-bind="scope.caption"></div>&ndash;&gt;-->
+                <!--</div>-->
+                <!--<div class="scope_owner">-->
+                    <!--<div class="scope_owner_avatar"><img ng-src="{{scope.owner.avatar}}"></div>-->
+                <!--</div>-->
+            <!-- </li>  -->
+
+        </ul>
+        <loadinganimation ng-show="updating"></loadinganimation>
+    </div>
+</div>

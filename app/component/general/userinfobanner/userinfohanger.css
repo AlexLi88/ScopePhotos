@@ -1,0 +1,188 @@
+#userinfohanger_main{
+
+    font-family: "Source Sans Pro";
+    height: 60px;
+    width: 100%;
+    padding: 0px;
+    padding-top: 13px;
+}
+
+
+#userinfohanger_main #visitor{
+
+    display: inherit;
+}
+
+#userinfohanger_main #visitor_s{
+
+    display: none;
+}
+
+#userinfohanger_main #user_tab{
+
+    /*position: fixed;*/
+    right: 0;
+    bottom: 0;
+    z-index: 5;
+    border-radius: 0;
+    height: 100%;
+    top: -10%;
+    position: relative;
+
+}
+
+#userinfohanger_main #uinfo{
+
+    height: 100%;
+    overflow: hidden;
+    display: inline-block;
+    margin-right: 5%;
+    cursor: pointer;
+    width: 150px;
+}
+
+#userinfohanger_main #uinfo #user_ava{
+
+    display: inline-block;
+    height: 100%;
+}
+#userinfohanger_main #uinfo #user_ava img{
+
+    height: 100%;
+    border-radius: 50%;
+}
+#userinfohanger_main #uinfo  #user_name{
+
+    display: inline-block;
+    color: white;
+    font-weight: 500;
+    padding: 0.5em;
+    padding-bottom: 0;
+    position: relative;
+    top: -10px;
+    vertical-align: bottom;
+}
+
+#userinfohanger_main #visitor button{
+
+    padding: .9em 1em;
+    font-size: 1.2em;
+    background: transparent;
+    line-height: 1em;
+    border: none;
+    color: #FF5757;
+    font-weight: 900;
+    font-family: quicksand;
+    cursor: pointer;
+}
+
+#userinfohanger_main #visitor button:active{
+
+    outline-width: 0px;
+}
+
+#userinfohanger_main #visitor button:focus{
+
+    outline-width: 0px;
+}
+
+
+/*@media only screen and (max-width: 500px){*/
+
+
+    /*#userinfohanger_main .ui.red.label{*/
+
+        /*display: none;*/
+    /*}*/
+
+    /*#userinfohanger_main .detail{*/
+
+        /*display: none;*/
+    /*}*/
+/*}*/
+
+#userinfohanger_main #visitor_s i {
+
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin-left: 0;
+    height: 2.7em;
+    width: 2.7em;
+    position: relative;
+    top: 0;
+    position: relative;
+    top: 3px;
+}
+#userinfohanger_main #visitor_s i:before{
+
+    content: none;
+}
+
+@media only screen and (max-width: 800px){
+
+    #userinfohanger_main #uinfo{
+
+        width: 100%;
+        position: relative;
+        top: 0px;
+        right: 2px;
+        height: 40px;
+    }
+    
+    #userinfohanger_main #visitor{
+
+        display: none;
+    }
+    
+    #userinfohanger_main #visitor_s{
+
+        display: inline-block;
+    }
+
+
+    #userinfohanger_main #uinfo{
+
+        width: 100%;
+        position: relative;
+        top: 0px;
+        right: 2px;
+    }
+
+    #userinfohanger_main #uinfo #user_name {
+
+        display: none;
+    }
+
+
+    #userinfohanger_main{
+
+        /*height: 35px;*/
+    }
+
+
+    #userinfohanger_main .ui.icon.user{
+
+        position: relative;
+        top: 6.5px;
+    }
+
+
+
+
+}
+
+@media only screen and (max-width: 700px){
+
+    #userinfohanger_main #uinfo #user_name {
+
+        display: none;
+    }
+
+
+
+    /*#userinfohanger_main #uinfo #user_ava img{*/
+
+        /*width:100%;*/
+        /*height:auto;*/
+    /*}*/
+}

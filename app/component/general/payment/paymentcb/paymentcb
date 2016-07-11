@@ -1,0 +1,44 @@
+#paymenitemlist_main{
+
+  #product_list{
+
+    padding: 1em;
+  }
+
+  #invoice{
+
+    text-align: center;
+    #invoice_title{
+
+        margin: 10px 0px;
+    }
+
+    #retrive_but{
+
+      margin-left: 5px;
+    }
+  }
+
+  .one_p{
+
+    display: inline-block;
+    width: 30%;
+    margin-left: 2.2%;
+    height: 500px;
+    border: 1px solid rgba(250, 87, 87, 0.29);
+    vertical-align: top;
+    border-radius: 5px;
+    padding: 1em;
+    .purchase{
+
+      text-align: center;
+      text-transform: uppercase;
+      .ui.red.button{
+
+        text-transform: uppercase;
+        border-radius: 10px;
+
+      }
+    }
+  }
+}

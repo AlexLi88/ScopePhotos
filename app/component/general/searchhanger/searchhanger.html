@@ -1,0 +1,119 @@
+<div id="searchHanger_main">
+
+    <div id="searchHanger_hanger">
+
+        <!--<form ng-submit="doSearch(searchValue)">-->
+
+            <!--<div class="ui icon fluid input">-->
+                <!--<input class="prompt" type="text" ng-model="searchValue">-->
+                <!--<i class="search icon"></i>-->
+            <!--</div>-->
+
+        <!--</form>-->
+
+        <div id="searchOptionTag" class="ui large secondary pointing menu">
+
+            <a class="item" ng-class="searchType == 'photo' && 'active' || ''"  ng-click="switchSearchType('photo')">
+                Photo
+            </a>
+            <a class="item" ng-class="searchType == 'scope' && 'active' || ''" ng-click="switchSearchType('scope')">
+                Scope
+            </a>
+            <a class="item" ng-class="searchType == 'map' && 'active' || ''" ng-click="switchSearchType('map')">
+                Map
+            </a>
+            <a class="item" data-content="Log in first to search for users" ng-show="userType =='user'" ng-class="{'disable':userType != 'user','blue active':searchType =='user'}"  ng-click="switchSearchType('user')">
+                User
+            </a>
+
+        </div>
+
+    </div>
+
+
+
+        <div id="displayControl">
+
+            <div id="embed_and_present"  class="ui tiny button" ng-show="currentState == 'imageSearch' && searchType == 'scope'">
+                <i class="share icon"></i>
+                Embed
+                <div class="ui special popup">
+
+                    <div id="embed_url" style="padding:0.2em 0em;">Embedding Url</div>
+                    <div class="ui mini input" id="embedurl">
+                        <input ng-model="embeddingUrl">
+                    </div>
+
+                </div>
+            </div>
+
+
+            <div id="displayOption" class="ui tiny buttons" ng-show="currentState != 'scopeSearch'">
+                <button class="ui button active" ng-click="imageAndText()">{{displayMode == 'smallwithtext'? 'Image Only': 'Image with Text'}}</button>
+                <!--<button class="ui button" ng-class="{active: displayMode =='smallwithtext'}" ng-click="imageAndText()">With Text</button>-->
+                <!--<div class="or"></div>-->
+                <!--<button class="ui button" ng-class="{active: displayMode =='smallwithouttext'}" ng-click="imageOnly()">Without Text</button>-->
+            </div>
+            <!--<div class="ui icon top basic left tiny pointing dropdown button" id="d_opinoin" id="menu_2">-->
+                <!--<i class="block layout icon"></i>-->
+                <!--&lt;!&ndash;<span class="text">Image & Text</span>&ndash;&gt;-->
+                <!--<div class="menu">-->
+                    <!--<div id="title">Display Options</div>-->
+                    <!--<div class="item active selected" ng-click="imageAndText()">-->
+                        <!--<div class="symb_con">-->
+                        <!--<div class="symb" ng-class="{selected: displayMode =='smallwithtext'}"><img ng-src="{{ display_smallwithtext }}"></div></div>-->
+                        <!--<div class="item_ti">Small with text</div>-->
+
+                    <!--</div>&lt;!&ndash;-->
+
+
+                    <!--&ndash;&gt;<div class="item" ng-click="imageOnly()">-->
+                        <!--<div class="symb_con">-->
+                        <!--<div class="symb" ng-class="{selected: displayMode =='smallwithouttext' }"><img ng-src="{{ display_smallwithouttext }}"></div></div>-->
+                        <!--<div class="item_ti">Small without text</div>-->
+
+                    <!--</div>&lt;!&ndash;-->
+
+                    <!--&ndash;&gt;<div class="item" ng-click="largeImage()">-->
+                    <!--<div class="symb_con">-->
+                        <!--<div class="symb"  ng-class="{selected: displayMode =='large' }"><img ng-src="{{ display_large}}"></div></div>-->
+                        <!--<div class="item_ti">Large</div>-->
+
+                    <!--</div>-->
+
+
+
+                <!--</div>-->
+            <!--</div>-->
+
+            <!--<button class="ui tiny labeled red icon button"><i class="slideshare icon">Share or Present</i></button>-->
+
+        <!--<button id="live_button" ng-show="searchT == 'scope'"  ng-mouseover="liveButtonOver = true" ng-mouseleave="liveButtonOver = false " ng-click="liveMode($event)" ng-style="!liveButtonOver && !liveModeEnable && {'background-image':'url('+ liveu +')'} || {'background-image':'url('+ liveon_1 +')'}">-->
+
+            <button id="live_button" ng-show="currentState == 'presentandshare.layout_basic' || currentState == 'imageSearch' && searchType == 'scope'" ng-click="liveMode($event)" ng-style="!liveButtonOver && !liveModeEnable && {'background-image':'url('+ liveu +')'} || {'background-image':'url('+ liveon_1 +')'}">
+                <div class="ui live popup">
+                    <div>Log in first to use our live streaming services</div>
+                </div>
+                <div class="ui live_error popup">
+                    <div id="embed_url" style="padding:0.2em 0em;">Sorry, you must login to use the live function.</div>
+                    <!--<div class="ui mini input" id="embedurl">-->
+                        <!--<input ng-model="embeddingUrl">-->
+                    <!--</div>-->
+
+                </div>
+                <!--<i class="red circle icon" ng-class="{'blinking':liveModeEnable}"></i>-->
+            <!--Live-->
+        </button>
+
+        <!--<div class="ui floating tiny dropdown labeled icon button" id="menu_1" ng-show="false">-->
+        <!--<i class="dropdown icon"></i>-->
+        <!--<span class="text">Compact Mode</span>-->
+        <!--<div class="menu">-->
+        <!--<div class="item active selected" ng-click="compactMode()">Compact Mode</div>-->
+                            <!--<div class="item" ng-click="presentationMode()">Presentation Mode</div>-->
+        <!--</div>-->
+        <!--</div>-->
+
+        </div>
+
+</div>

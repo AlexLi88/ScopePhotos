@@ -1,0 +1,20 @@
+<div id="userfavoritemanagement_main">
+    <errormessage errorType="nouserfavorite" ng-show="userFavoriteCtr.showErrorMessage"></errormessage>
+    <div id="user_image_list">
+        <div class="ui cards">
+            <div class="ui tall segment one_user_scope"
+                 ng-repeat="scope in userFavoriteCtr.favArr"
+                 ng-mouseover="scope.$$showImage = true"
+                 ng-mouseleave="scope.$$showImage = false">
+                <div class="header_background" ng-show="!scope.$$showImage"></div>
+                <div class="ui header small scope_header" ng-show="!scope.$$showImage">
+                    <div class="header">{{scope.caption}}</div>
+                </div>
+                <div class="blurring dimmable scope">
+                    <a ng-style="{'background-image':'url('+scope.coverImage+')'}" ng-href="{{'#/imagesearch?searchType=scope&searchContent=' + scope.caption + '&searchId=' + scope.id }}"></a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
